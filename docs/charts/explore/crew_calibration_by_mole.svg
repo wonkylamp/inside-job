@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="chart-title chart-desc" font-family='system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif'>
+<title id="chart-title">When the crew is sure, is it right?</title>
+<desc id="chart-desc">Share of crew ratings at the vote that were on a real mole, by how sure the rating was. Cheap moles (pilots): 6% of 705, 26% of 702, 44% of 376, 57% of 376, 75% of 207. Haiku 4.5 moles: 11% of 85, 37% of 134, 45% of 73, 31% of 72, 76% of 42. Opus 5.5 moles: 16% of 95, 35% of 139, 36% of 83, 50% of 70, 57% of 47. Fable 5.2 moles: 33% of 51, 40% of 111, 38% of 82, 27% of 55, 26% of 27.</desc>
+<rect x="0" y="0" width="1600" height="900" fill="#fcfcfb"/>
+<text x="80.0" y="98.0" font-size="60" font-weight="700" fill="#0b0b0b" text-anchor="start">When the crew is sure, is it right?</text>
+<text x="80.0" y="148.0" font-size="28" font-weight="400" fill="#52514e" text-anchor="start">Share of crew ratings at the vote that were on a real mole, by how sure the rating was</text>
+<line x1="220" y1="690.0" x2="1180" y2="690.0" stroke="#e1e0d9"/>
+<text x="206.0" y="698.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="end">0%</text>
+<line x1="220" y1="594.0" x2="1180" y2="594.0" stroke="#e1e0d9"/>
+<text x="206.0" y="602.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="end">20%</text>
+<line x1="220" y1="498.0" x2="1180" y2="498.0" stroke="#e1e0d9"/>
+<text x="206.0" y="506.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="end">40%</text>
+<line x1="220" y1="402.0" x2="1180" y2="402.0" stroke="#e1e0d9"/>
+<text x="206.0" y="410.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="end">60%</text>
+<line x1="220" y1="306.0" x2="1180" y2="306.0" stroke="#e1e0d9"/>
+<text x="206.0" y="314.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="end">80%</text>
+<line x1="220" y1="210.0" x2="1180" y2="210.0" stroke="#e1e0d9"/>
+<text x="206.0" y="218.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="end">100%</text>
+<text x="316.0" y="724.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="middle">0–20</text>
+<text x="508.0" y="724.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="middle">20–40</text>
+<text x="700.0" y="724.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="middle">40–60</text>
+<text x="892.0" y="724.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="middle">60–80</text>
+<text x="1084.0" y="724.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="middle">80–100</text>
+<line x1="220" y1="690" x2="1180" y2="690" stroke="#c3c2b7"/>
+<text x="700.0" y="760.0" font-size="24" font-weight="600" fill="#0b0b0b" text-anchor="middle">crew's private suspicion rating (0–100)</text>
+<text x="70.0" y="188.0" font-size="24" font-weight="600" fill="#0b0b0b" text-anchor="start">actually a mole</text>
+<line x1="220.0" y1="690.0" x2="1180.0" y2="210.0" stroke="#52514e" stroke-dasharray="8 8" stroke-width="2"/>
+<text x="1151.2" y="210.4" font-size="20" font-weight="400" fill="#52514e" text-anchor="end" stroke="#fcfcfb" stroke-width="8" stroke-linejoin="round" paint-order="stroke">perfectly calibrated</text>
+<polyline points="301.0,659.4 493.0,564.2 685.0,480.6 877.0,418.1 1069.0,328.3" fill="none" stroke="#8a8a85" stroke-width="4"/>
+<line x1="301.0" y1="672.0" x2="301.0" y2="644.8" stroke="#8a8a85" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="301.0" cy="659.4" r="8" fill="#8a8a85" stroke="#fcfcfb" stroke-width="2"><title>Cheap moles (pilots), 45 of 705</title></circle>
+<line x1="493.0" y1="585.1" x2="493.0" y2="544.6" stroke="#8a8a85" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="493.0" cy="564.2" r="8" fill="#8a8a85" stroke="#fcfcfb" stroke-width="2"><title>Cheap moles (pilots), 184 of 702</title></circle>
+<line x1="685.0" y1="504.4" x2="685.0" y2="457.9" stroke="#8a8a85" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="685.0" cy="480.6" r="8" fill="#8a8a85" stroke="#fcfcfb" stroke-width="2"><title>Cheap moles (pilots), 164 of 376</title></circle>
+<line x1="877.0" y1="445.2" x2="877.0" y2="387.9" stroke="#8a8a85" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="877.0" cy="418.1" r="8" fill="#8a8a85" stroke="#fcfcfb" stroke-width="2"><title>Cheap moles (pilots), 213 of 376</title></circle>
+<line x1="1069.0" y1="370.7" x2="1069.0" y2="286.6" stroke="#8a8a85" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="1069.0" cy="328.3" r="8" fill="#8a8a85" stroke="#fcfcfb" stroke-width="2"><title>Cheap moles (pilots), 156 of 207</title></circle>
+<rect x="1230" y="232" width="34" height="8" fill="#8a8a85"/>
+<text x="1278.0" y="244.0" font-size="28" font-weight="700" fill="#0b0b0b" text-anchor="start">Cheap moles (pilots)</text>
+<text x="1278.0" y="274.0" font-size="21" font-weight="400" fill="#52514e" text-anchor="start">2366 ratings</text>
+<polyline points="311.0,639.2 503.0,510.9 695.0,473.0 887.0,543.3 1079.0,324.3" fill="none" stroke="#2a78d6" stroke-width="4"/>
+<line x1="311.0" y1="673.4" x2="311.0" y2="575.1" stroke="#2a78d6" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="311.0" cy="639.2" r="8" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Haiku 4.5 moles, 9 of 85</title></circle>
+<line x1="503.0" y1="553.4" x2="503.0" y2="465.2" stroke="#2a78d6" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="503.0" cy="510.9" r="8" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Haiku 4.5 moles, 50 of 134</title></circle>
+<line x1="695.0" y1="551.9" x2="695.0" y2="409.0" stroke="#2a78d6" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="695.0" cy="473.0" r="8" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Haiku 4.5 moles, 33 of 73</title></circle>
+<line x1="887.0" y1="588.6" x2="887.0" y2="496.7" stroke="#2a78d6" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="887.0" cy="543.3" r="8" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Haiku 4.5 moles, 22 of 72</title></circle>
+<line x1="1079.0" y1="430.0" x2="1079.0" y2="252.4" stroke="#2a78d6" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="1079.0" cy="324.3" r="8" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Haiku 4.5 moles, 32 of 42</title></circle>
+<rect x="1230" y="306" width="34" height="8" fill="#2a78d6"/>
+<text x="1278.0" y="318.0" font-size="28" font-weight="700" fill="#0b0b0b" text-anchor="start">Haiku 4.5 moles</text>
+<text x="1278.0" y="348.0" font-size="21" font-weight="400" fill="#52514e" text-anchor="start">406 ratings</text>
+<polyline points="321.0,614.2 513.0,520.8 705.0,516.5 897.0,450.0 1089.0,414.3" fill="none" stroke="#d68a2a" stroke-width="4"/>
+<line x1="321.0" y1="667.0" x2="321.0" y2="520.6" stroke="#d68a2a" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="321.0" cy="614.2" r="8" fill="#d68a2a" stroke="#fcfcfb" stroke-width="2"><title>Opus 5.5 moles, 15 of 95</title></circle>
+<line x1="513.0" y1="545.7" x2="513.0" y2="491.5" stroke="#d68a2a" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="513.0" cy="520.8" r="8" fill="#d68a2a" stroke="#fcfcfb" stroke-width="2"><title>Opus 5.5 moles, 49 of 139</title></circle>
+<line x1="705.0" y1="552.9" x2="705.0" y2="481.8" stroke="#d68a2a" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="705.0" cy="516.5" r="8" fill="#d68a2a" stroke="#fcfcfb" stroke-width="2"><title>Opus 5.5 moles, 30 of 83</title></circle>
+<line x1="897.0" y1="495.0" x2="897.0" y2="406.6" stroke="#d68a2a" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="897.0" cy="450.0" r="8" fill="#d68a2a" stroke="#fcfcfb" stroke-width="2"><title>Opus 5.5 moles, 35 of 70</title></circle>
+<line x1="1089.0" y1="502.2" x2="1089.0" y2="333.4" stroke="#d68a2a" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="1089.0" cy="414.3" r="8" fill="#d68a2a" stroke="#fcfcfb" stroke-width="2"><title>Opus 5.5 moles, 27 of 47</title></circle>
+<rect x="1230" y="380" width="34" height="8" fill="#d68a2a"/>
+<text x="1278.0" y="392.0" font-size="28" font-weight="700" fill="#0b0b0b" text-anchor="start">Opus 5.5 moles</text>
+<text x="1278.0" y="422.0" font-size="21" font-weight="400" fill="#52514e" text-anchor="start">434 ratings</text>
+<polyline points="331.0,530.0 523.0,499.7 715.0,508.5 907.0,559.1 1099.0,565.6" fill="none" stroke="#c23b5a" stroke-width="4"/>
+<line x1="331.0" y1="609.0" x2="331.0" y2="411.3" stroke="#c23b5a" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="331.0" cy="530.0" r="8" fill="#c23b5a" stroke="#fcfcfb" stroke-width="2"><title>Fable 5.2 moles, 17 of 51</title></circle>
+<line x1="523.0" y1="524.8" x2="523.0" y2="476.2" stroke="#c23b5a" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="523.0" cy="499.7" r="8" fill="#c23b5a" stroke="#fcfcfb" stroke-width="2"><title>Fable 5.2 moles, 44 of 111</title></circle>
+<line x1="715.0" y1="535.3" x2="715.0" y2="477.2" stroke="#c23b5a" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="715.0" cy="508.5" r="8" fill="#c23b5a" stroke="#fcfcfb" stroke-width="2"><title>Fable 5.2 moles, 31 of 82</title></circle>
+<line x1="907.0" y1="604.7" x2="907.0" y2="519.7" stroke="#c23b5a" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="907.0" cy="559.1" r="8" fill="#c23b5a" stroke="#fcfcfb" stroke-width="2"><title>Fable 5.2 moles, 15 of 55</title></circle>
+<line x1="1099.0" y1="669.1" x2="1099.0" y2="480.0" stroke="#c23b5a" stroke-width="2.5" stroke-opacity="0.7"/>
+<circle cx="1099.0" cy="565.6" r="8" fill="#c23b5a" stroke="#fcfcfb" stroke-width="2"><title>Fable 5.2 moles, 7 of 27</title></circle>
+<rect x="1230" y="454" width="34" height="8" fill="#c23b5a"/>
+<text x="1278.0" y="466.0" font-size="28" font-weight="700" fill="#0b0b0b" text-anchor="start">Fable 5.2 moles</text>
+<text x="1278.0" y="496.0" font-size="21" font-weight="400" fill="#52514e" text-anchor="start">326 ratings</text>
+<text x="80.0" y="800.0" font-size="21" font-weight="400" fill="#52514e" text-anchor="start">Every crew rating of every other player at each vote. Whisker: bootstrap 95% interval over games.</text>
+<text x="80.0" y="830.0" font-size="21" font-weight="400" fill="#52514e" text-anchor="start">Pilots: 40 games, cheap mixed moles. Others: 7 games each, both moles that model, same cheap crew</text>
+<text x="80.0" y="860.0" font-size="21" font-weight="400" fill="#52514e" text-anchor="start">and the same seven deals. Ratings within a game are not independent; read the bands, not the decimals.</text>
+</svg>

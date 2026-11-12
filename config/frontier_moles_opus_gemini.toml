@@ -1,0 +1,76 @@
+# Inside Job — frontier table, fixed mole pair (rules v0.3, RULES.md; docs/OPENROUTER.md): frontier_table.toml
+# with one thing changed, the roles are fixed instead of dealt: claude-opus-5-5 and google/gemini-4-carbon are the moles,
+# the other five seats are crew. Same seven models, rules, [limits] and [narrator]. The two Claude seats and
+# the narrator run through `claude -p` on the subscription; ids with a "/" run through OpenRouter on the
+# owner's key (export OPENROUTER_API_KEY in your own shell; it is never written anywhere).
+
+[game]
+num_moles = 2
+clues_per_round = 1           # clues each recipient gets per round
+clue_strength = "weak"        # weak | normal | strong
+clue_recipients = 3           # average number of alive players dealt a clue each round; 0 = everyone
+clue_recipients_spread = 1    # the real number each round is drawn from recipients +/- spread
+max_rounds = 0                # 0 = play until two remain (players - 2 rounds)
+job_size = 3
+job_size_small = 2            # team size once 4 or fewer players remain
+clean_target = 3              # crew win at this many clean jobs
+sabotage_target = 2           # moles win at this many blown jobs
+whispers = true
+whisper_pairs_max = 3
+whisper_exchanges = 2         # messages per player per whisper
+discussion_passes = 2
+finale_exchanges = 1          # public pitches per finalist before the choice
+pot = 100
+anonymise = true              # players get codenames; no model names in any prompt
+
+[limits]
+max_parallel_calls = 4
+call_timeout_s = 240
+retries = 2                   # extra attempts after the first
+confessional_words = 70
+public_words = 60
+whisper_words = 50
+memory_words = 60
+word_grace = 0.15             # the engine's hard cap is ceil(limit * (1 + word_grace)); 0 = no grace
+max_thinking_tokens = 2000    # MAX_THINKING_TOKENS in the child env. 0 = thinking off. -1 = variable not set
+effort = "low"                # passed as --effort <level>. "" = flag not passed. low|medium|high|xhigh|max
+
+[narrator]
+model = "claude-haiku-4-5"
+recap_words = 100
+
+[openrouter]
+budget_usd = 4.00             # stop every paid request once billed spend in this process reaches this
+max_output_tokens = 4500      # per call, reasoning included (OpenRouter `max_tokens`)
+# If a model's responses carry no cost, give its price (dollars per million tokens), e.g.
+# [openrouter.prices."x-ai/grok-4.7"]
+# input = 3.0
+# output = 15.0
+
+[[players]]
+model = "claude-fable-5-2"
+role = "crew"
+
+[[players]]
+model = "claude-opus-5-5"
+role = "mole"
+
+[[players]]
+model = "google/gemini-4-carbon"
+role = "mole"
+
+[[players]]
+model = "openai/gpt-6-astra"
+role = "crew"
+
+[[players]]
+model = "x-ai/grok-4.7"
+role = "crew"
+
+[[players]]
+model = "deepseek/deepseek-v4-pro-0813"
+role = "crew"
+
+[[players]]
+model = "moonshotai/kimi-k3.1-pro"
+role = "crew"

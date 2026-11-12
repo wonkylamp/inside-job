@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img" aria-labelledby="chart-title chart-desc" font-family='system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif'>
+<title id="chart-title">Two moles of the same model won. What did they do with the pot?</title>
+<desc id="chart-desc">Chart. Two moles of the same model won. What did they do with the pot? When the two moles win with both alive, each chooses split or steal in secret over a 100-point pot. Both split: 50 each; one steals: 100 and 0; both steal: 0 each. Finales per model, both moles the same model: Fable 5.2, 6 finales in 10 games: 6 both split; Opus 5.5, 1 finale in 10 games: 1 both split; Sonnet 5.5, 5 finales in 10 games: 1 both split, 2 one stole, 2 both stole; Haiku 5.5, 2 finales in 10 games: 1 one stole, 1 both stole; DeepSeek V4 Pro (reasoning off): no finale (5 games); Gemini 4 Carbon, 3 finales in 10 games: 3 both stole; Grok 4.7, 3 finales in 10 games: 3 both stole; Kimi K3.1 Pro, 3 finales in 10 games: 2 one stole, 1 both stole. Rows: Claude models, then other labs A to Z; not a ranking. Small counts. Not a planned test. Each finalist faced a copy of itself. In a one-shot finale, stealing never pays less than splitting.</desc>
+<rect x="0" y="0" width="1200" height="1500" fill="#fcfcfb"/>
+<text class="title" x="60.0" y="106.8" font-size="60" font-weight="700" fill="#0b0b0b" text-anchor="start">Two moles of the same model won.</text>
+<text class="title" x="60.0" y="171.6" font-size="60" font-weight="700" fill="#0b0b0b" text-anchor="start">What did they do with the pot?</text>
+<text class="lead" x="60.0" y="223.3" font-size="34" font-weight="400" fill="#52514e" text-anchor="start">Each chose in secret: split or steal a 100-point pot.</text>
+<rect class="swatch both_split" x="60.0" y="256.8" width="30" height="30" rx="4" fill="#86b6ef"/>
+<text class="legend" x="102.0" y="281.3" font-size="34" font-weight="700" fill="#0b0b0b" text-anchor="start">Both split</text>
+<text class="legend-pay" x="102.0" y="318.8" font-size="30" font-weight="400" fill="#52514e" text-anchor="start">50 each</text>
+<rect class="swatch one_stole" x="420.0" y="256.8" width="30" height="30" rx="4" fill="#2a78d6"/>
+<text class="legend" x="462.0" y="281.3" font-size="34" font-weight="700" fill="#0b0b0b" text-anchor="start">One stole</text>
+<text class="legend-pay" x="462.0" y="318.8" font-size="30" font-weight="400" fill="#52514e" text-anchor="start">100 and 0</text>
+<rect class="swatch both_stole" x="780.0" y="256.8" width="30" height="30" rx="4" fill="#104281"/>
+<text class="legend" x="822.0" y="281.3" font-size="34" font-weight="700" fill="#0b0b0b" text-anchor="start">Both stole</text>
+<text class="legend-pay" x="822.0" y="318.8" font-size="30" font-weight="400" fill="#52514e" text-anchor="start">0 each</text>
+<g class="row" data-model="Fable 5.2">
+<text x="60.0" y="386.6"><tspan class="name" font-size="40" font-weight="700" fill="#0b0b0b">Fable 5.2</tspan><tspan class="name-note" dx="8.100000000000001" font-size="30" font-weight="400" fill="#52514e">· 6 finales</tspan></text>
+<path class="seg both_split" d="M60.0,401.4 H1136.0 Q1140.0,401.4 1140.0,405.4 V477.4 Q1140.0,481.4 1136.0,481.4 H60.0 Z" fill="#86b6ef"><title>Fable 5.2: 6 of 6 finales both split</title></path>
+<text class="seg-count" x="74.0" y="436.7" font-size="34" font-weight="700" fill="#0b0b0b" text-anchor="start">6 of 6</text>
+<text class="seg-word" x="74.0" y="472.7" font-size="30" font-weight="400" fill="#0b0b0b" text-anchor="start">both split</text>
+</g>
+<g class="row" data-model="Opus 5.5">
+<text x="60.0" y="529.9"><tspan class="name" font-size="40" font-weight="700" fill="#0b0b0b">Opus 5.5</tspan><tspan class="name-note" dx="8.100000000000001" font-size="30" font-weight="400" fill="#52514e">· 1 finale</tspan></text>
+<path class="seg both_split" d="M60.0,544.7 H236.0 Q240.0,544.7 240.0,548.7 V620.7 Q240.0,624.7 236.0,624.7 H60.0 Z" fill="#86b6ef"><title>Opus 5.5: 1 of 1 finales both split</title></path>
+<text class="seg-count" x="74.0" y="579.9" font-size="34" font-weight="700" fill="#0b0b0b" text-anchor="start">1 of 1</text>
+<text class="seg-word" x="74.0" y="615.9" font-size="30" font-weight="400" fill="#0b0b0b" text-anchor="start">both split</text>
+</g>
+<g class="row" data-model="Sonnet 5.5">
+<text x="60.0" y="673.1"><tspan class="name" font-size="40" font-weight="700" fill="#0b0b0b">Sonnet 5.5</tspan><tspan class="name-note" dx="8.100000000000001" font-size="30" font-weight="400" fill="#52514e">· 5 finales</tspan></text>
+<path class="seg both_split" d="M60.0,687.9 H238.0 Q238.0,687.9 238.0,687.9 V767.9 Q238.0,767.9 238.0,767.9 H60.0 Z" fill="#86b6ef"><title>Sonnet 5.5: 1 of 5 finales both split</title></path>
+<text class="seg-count" x="74.0" y="723.2" font-size="34" font-weight="700" fill="#0b0b0b" text-anchor="start">1 of 5</text>
+<text class="seg-word" x="74.0" y="759.2" font-size="30" font-weight="400" fill="#0b0b0b" text-anchor="start">both split</text>
+<path class="seg one_stole" d="M240.0,687.9 H598.0 Q598.0,687.9 598.0,687.9 V767.9 Q598.0,767.9 598.0,767.9 H240.0 Z" fill="#2a78d6"><title>Sonnet 5.5: 2 of 5 finales one stole</title></path>
+<text class="seg-count" x="254.0" y="723.2" font-size="34" font-weight="700" fill="#ffffff" text-anchor="start">2 of 5</text>
+<text class="seg-word" x="254.0" y="759.2" font-size="30" font-weight="400" fill="#ffffff" text-anchor="start">one stole</text>
+<path class="seg both_stole" d="M600.0,687.9 H956.0 Q960.0,687.9 960.0,691.9 V763.9 Q960.0,767.9 956.0,767.9 H600.0 Z" fill="#104281"><title>Sonnet 5.5: 2 of 5 finales both stole</title></path>
+<text class="seg-count" x="614.0" y="723.2" font-size="34" font-weight="700" fill="#ffffff" text-anchor="start">2 of 5</text>
+<text class="seg-word" x="614.0" y="759.2" font-size="30" font-weight="400" fill="#ffffff" text-anchor="start">both stole</text>
+</g>
+<g class="row" data-model="Haiku 5.5">
+<text x="60.0" y="816.4"><tspan class="name" font-size="40" font-weight="700" fill="#0b0b0b">Haiku 5.5</tspan><tspan class="name-note" dx="8.100000000000001" font-size="30" font-weight="400" fill="#52514e">· 2 finales</tspan></text>
+<path class="seg one_stole" d="M60.0,831.2 H238.0 Q238.0,831.2 238.0,831.2 V911.2 Q238.0,911.2 238.0,911.2 H60.0 Z" fill="#2a78d6"><title>Haiku 5.5: 1 of 2 finales one stole</title></path>
+<text class="seg-count" x="74.0" y="866.5" font-size="34" font-weight="700" fill="#ffffff" text-anchor="start">1 of 2</text>
+<text class="seg-word" x="74.0" y="902.5" font-size="30" font-weight="400" fill="#ffffff" text-anchor="start">one stole</text>
+<path class="seg both_stole" d="M240.0,831.2 H416.0 Q420.0,831.2 420.0,835.2 V907.2 Q420.0,911.2 416.0,911.2 H240.0 Z" fill="#104281"><title>Haiku 5.5: 1 of 2 finales both stole</title></path>
+<text class="seg-count" x="254.0" y="866.5" font-size="34" font-weight="700" fill="#ffffff" text-anchor="start">1 of 2</text>
+<text class="seg-word" x="254.0" y="902.5" font-size="30" font-weight="400" fill="#ffffff" text-anchor="start">both stole</text>
+</g>
+<g class="row" data-model="Gemini 4 Carbon">
+<text x="60.0" y="959.7"><tspan class="name" font-size="40" font-weight="700" fill="#0b0b0b">Gemini 4 Carbon</tspan><tspan class="name-note" dx="8.100000000000001" font-size="30" font-weight="400" fill="#52514e">· 3 finales</tspan></text>
+<path class="seg both_stole" d="M60.0,974.5 H596.0 Q600.0,974.5 600.0,978.5 V1050.5 Q600.0,1054.5 596.0,1054.5 H60.0 Z" fill="#104281"><title>Gemini 4 Carbon: 3 of 3 finales both stole</title></path>
+<text class="seg-count" x="74.0" y="1009.7" font-size="34" font-weight="700" fill="#ffffff" text-anchor="start">3 of 3</text>
+<text class="seg-word" x="74.0" y="1045.7" font-size="30" font-weight="400" fill="#ffffff" text-anchor="start">both stole</text>
+</g>
+<g class="row" data-model="Grok 4.7">
+<text x="60.0" y="1102.9"><tspan class="name" font-size="40" font-weight="700" fill="#0b0b0b">Grok 4.7</tspan><tspan class="name-note" dx="8.100000000000001" font-size="30" font-weight="400" fill="#52514e">· 3 finales</tspan></text>
+<path class="seg both_stole" d="M60.0,1117.7 H596.0 Q600.0,1117.7 600.0,1121.7 V1193.7 Q600.0,1197.7 596.0,1197.7 H60.0 Z" fill="#104281"><title>Grok 4.7: 3 of 3 finales both stole</title></path>
+<text class="seg-count" x="74.0" y="1153.0" font-size="34" font-weight="700" fill="#ffffff" text-anchor="start">3 of 3</text>
+<text class="seg-word" x="74.0" y="1189.0" font-size="30" font-weight="400" fill="#ffffff" text-anchor="start">both stole</text>
+</g>
+<g class="row" data-model="Kimi K3.1 Pro">
+<text x="60.0" y="1246.2"><tspan class="name" font-size="40" font-weight="700" fill="#0b0b0b">Kimi K3.1 Pro</tspan><tspan class="name-note" dx="8.100000000000001" font-size="30" font-weight="400" fill="#52514e">· 3 finales</tspan></text>
+<path class="seg one_stole" d="M60.0,1261.0 H418.0 Q418.0,1261.0 418.0,1261.0 V1341.0 Q418.0,1341.0 418.0,1341.0 H60.0 Z" fill="#2a78d6"><title>Kimi K3.1 Pro: 2 of 3 finales one stole</title></path>
+<text class="seg-count" x="74.0" y="1296.3" font-size="34" font-weight="700" fill="#ffffff" text-anchor="start">2 of 3</text>
+<text class="seg-word" x="74.0" y="1332.3" font-size="30" font-weight="400" fill="#ffffff" text-anchor="start">one stole</text>
+<path class="seg both_stole" d="M420.0,1261.0 H596.0 Q600.0,1261.0 600.0,1265.0 V1337.0 Q600.0,1341.0 596.0,1341.0 H420.0 Z" fill="#104281"><title>Kimi K3.1 Pro: 1 of 3 finales both stole</title></path>
+<text class="seg-count" x="434.0" y="1296.3" font-size="34" font-weight="700" fill="#ffffff" text-anchor="start">1 of 3</text>
+<text class="seg-word" x="434.0" y="1332.3" font-size="30" font-weight="400" fill="#ffffff" text-anchor="start">both stole</text>
+</g>
+<text class="foot" x="60.0" y="1392.4" font-size="30" font-weight="400" fill="#52514e" text-anchor="start">Small counts. Not a planned test.</text>
+<text class="foot" x="60.0" y="1429.9" font-size="30" font-weight="400" fill="#52514e" text-anchor="start">Each finalist faced a copy of itself.</text>
+<text class="foot" x="60.0" y="1467.4" font-size="30" font-weight="400" fill="#52514e" text-anchor="start">In a one-shot finale, stealing never pays less than splitting.</text>
+</svg>

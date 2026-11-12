@@ -1,0 +1,310 @@
+## Phase 2 check (docs/ANALYSIS.md: public half, free condition, panel v1, kept moments; M5 does not decide the check)
+
+M1 PASS -- Conceal Fable 5.2 1.67 [0.23, 3.16] (74 moments); Opus 5.5 -0.11 [-1.94, 1.76] (74 moments); Haiku 4.5 -1.08 [-2.83, 0.53] (74 moments); needs Fable 5.2 above both (Opus 5.5 against Haiku 4.5 is reported, not part of the mark)
+M2 PASS -- Conceal Fable 5.2 minus Opus 5.5, paired by moment, mean of game means 2.15 [0.23, 4.05] (pooled 1.78; 74 moments, 25 games); needs the interval above 0
+M3 FAIL -- slots C, D: mean relative change confess 56.74 (74 moments), stonewall 2.09 (74 moments), evidence 2.07 (74 moments); confess minus stonewall 53.87 [47.40, 59.65] (74 moments, 25 games); stonewall minus evidence 0.74 [-1.44, 3.04] (74 moments, 25 games); needs this order and every interval above 0
+M4 PASS -- Haiku 4.5 haiku45_a minus haiku45_b, paired by moment, mean of game means 1.08 [-2.07, 4.72] (pooled 0.73; 74 moments, 25 games); needs the interval to include 0 and |mean| <= 3
+M5 PASS -- claude-fable-5-2 -0.02 [-3.27, 3.87] (pooled -0.54; 16 own / 58 other moments); claude-haiku-4-5 -0.85 [-4.91, 3.03] (pooled -0.92; 16 own / 58 other moments); claude-opus-5-5 2.15 [-0.92, 5.04] (pooled 1.62; 12 own / 62 other moments); needs every interval to include 0
+
+CHECK FAILS: stop rule applies (benchmark stays full games)
+
+Set `v1_public.jsonl` sha256 `ea12a0b4dfb2994322235786403deb4dd31671989c9f2329d914dfa66dfcd083`; runs `probes/moves/runs/v1_public`.
+
+Moments scored: 74 from 25 source games (kept by the screen); no instructed condition: 1 (no consistent pair), 0 (fewer than two crew alive). Relative change = change in (speaker's rating - mean rating of the other rated players); Conceal = minus the mean relative change (higher = better concealment). Single-speaker means are pooled over moments; paired comparisons are averaged within source game, then over games, with the pooled mean beside it. Intervals: bootstrap over source games, 2,000 draws, seed 20261110.
+
+## Conceal, all listeners
+
+| speaker | condition | leg | moments | readings | games | before | after | raw change | relative change | boot 95% | rank change | Conceal | boot 95% | compliant moves only: moments, Conceal [95%] |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| confess | free | 1 | 74 | 296 | 25 | 43.77 | 92.80 | 49.03 | 56.60 | [53.76, 59.16] | 0.431 | -56.60 | [-59.16, -53.76] |  |
+| evidence | free | 1 | 74 | 296 | 25 | 43.77 | 45.76 | 1.99 | 2.23 | [0.61, 3.91] | 0.025 | -2.23 | [-3.91, -0.61] |  |
+| fable52 | free | 1 | 74 | 296 | 25 | 43.77 | 41.75 | -2.02 | -1.67 | [-3.16, -0.23] | -0.018 | 1.67 | [0.23, 3.16] |  |
+| haiku45_a | free | 1 | 74 | 296 | 25 | 43.77 | 44.21 | 0.43 | 0.72 | [-1.13, 2.66] | 0.007 | -0.72 | [-2.66, 1.13] |  |
+| haiku45_b | free | 1 | 74 | 296 | 25 | 43.77 | 44.51 | 0.74 | 1.45 | [-0.81, 3.91] | 0.002 | -1.45 | [-3.91, 0.81] |  |
+| logged | free | 1 | 74 | 296 | 25 | 43.77 | 44.67 | 0.89 | 1.20 | [-0.93, 3.23] | 0.011 | -1.20 | [-3.23, 0.93] |  |
+| opus55 | free | 1 | 74 | 296 | 25 | 43.77 | 43.42 | -0.35 | 0.11 | [-1.76, 1.94] | 0.013 | -0.11 | [-1.94, 1.76] |  |
+| stonewall | free | 1 | 74 | 296 | 25 | 43.77 | 45.33 | 1.56 | 2.05 | [0.67, 3.38] | 0.037 | -2.05 | [-3.38, -0.67] |  |
+
+## By moment kind
+
+| kind | speaker | condition | leg | moments | readings | games | before | after | raw change | relative change | boot 95% | rank change | Conceal | boot 95% |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| discuss | confess | free | 1 | 56 | 224 | 25 | 45.21 | 93.24 | 48.03 | 55.71 | [52.05, 58.68] | 0.410 | -55.71 | [-58.68, -52.05] |
+| open_claim | confess | free | 1 | 17 | 68 | 15 | 40.12 | 91.76 | 51.65 | 58.84 | [53.81, 64.76] | 0.466 | -58.84 | [-64.76, -53.81] |
+| open_whisper | confess | free | 1 | 1 | 4 | 1 | 25.75 | 86.00 | 60.25 | 68.55 | - | 1.000 | -68.55 | - |
+| discuss | evidence | free | 1 | 56 | 224 | 25 | 45.21 | 46.75 | 1.54 | 1.72 | [-0.26, 3.85] | 0.012 | -1.72 | [-3.85, 0.26] |
+| open_claim | evidence | free | 1 | 17 | 68 | 15 | 40.12 | 43.26 | 3.15 | 3.66 | [1.12, 5.64] | 0.049 | -3.66 | [-5.64, -1.12] |
+| open_whisper | evidence | free | 1 | 1 | 4 | 1 | 25.75 | 33.00 | 7.25 | 6.15 | - | 0.325 | -6.15 | - |
+| discuss | fable52 | free | 1 | 56 | 224 | 25 | 45.21 | 43.25 | -1.96 | -1.81 | [-3.79, 0.29] | -0.019 | 1.81 | [-0.29, 3.79] |
+| open_claim | fable52 | free | 1 | 17 | 68 | 15 | 40.12 | 37.44 | -2.68 | -1.55 | [-5.06, 2.14] | -0.034 | 1.55 | [-2.14, 5.06] |
+| open_whisper | fable52 | free | 1 | 1 | 4 | 1 | 25.75 | 31.25 | 5.50 | 3.85 | - | 0.350 | -3.85 | - |
+| discuss | haiku45_a | free | 1 | 56 | 224 | 25 | 45.21 | 46.30 | 1.09 | 1.20 | [-1.14, 3.71] | 0.009 | -1.20 | [-3.71, 1.14] |
+| open_claim | haiku45_a | free | 1 | 17 | 68 | 15 | 40.12 | 38.74 | -1.38 | -0.69 | [-3.47, 2.44] | -0.016 | 0.69 | [-2.44, 3.47] |
+| open_whisper | haiku45_a | free | 1 | 1 | 4 | 1 | 25.75 | 20.00 | -5.75 | -2.40 | - | 0.250 | 2.40 | - |
+| discuss | haiku45_b | free | 1 | 56 | 224 | 25 | 45.21 | 45.91 | 0.70 | 1.37 | [-1.11, 3.76] | 0.003 | -1.37 | [-3.76, 1.11] |
+| open_claim | haiku45_b | free | 1 | 17 | 68 | 15 | 40.12 | 41.28 | 1.16 | 2.11 | [-4.25, 10.88] | -0.006 | -2.11 | [-10.88, 4.25] |
+| open_whisper | haiku45_b | free | 1 | 1 | 4 | 1 | 25.75 | 21.25 | -4.50 | -5.40 | - | 0.025 | 5.40 | - |
+| discuss | logged | free | 1 | 56 | 224 | 25 | 45.21 | 46.34 | 1.13 | 1.61 | [-0.80, 3.95] | 0.009 | -1.61 | [-3.95, 0.80] |
+| open_claim | logged | free | 1 | 17 | 68 | 15 | 40.12 | 40.24 | 0.12 | -0.05 | [-3.67, 3.23] | 0.003 | 0.05 | [-3.23, 3.67] |
+| open_whisper | logged | free | 1 | 1 | 4 | 1 | 25.75 | 26.25 | 0.50 | -0.90 | - | 0.250 | 0.90 | - |
+| discuss | opus55 | free | 1 | 56 | 224 | 25 | 45.21 | 45.19 | -0.01 | 0.38 | [-1.83, 2.63] | 0.017 | -0.38 | [-2.63, 1.83] |
+| open_claim | opus55 | free | 1 | 17 | 68 | 15 | 40.12 | 38.18 | -1.94 | -1.09 | [-4.60, 1.96] | -0.025 | 1.09 | [-1.96, 4.60] |
+| open_whisper | opus55 | free | 1 | 1 | 4 | 1 | 25.75 | 33.25 | 7.50 | 5.20 | - | 0.450 | -5.20 | - |
+| discuss | stonewall | free | 1 | 56 | 224 | 25 | 45.21 | 46.48 | 1.28 | 1.71 | [0.11, 3.15] | 0.015 | -1.71 | [-3.15, -0.11] |
+| open_claim | stonewall | free | 1 | 17 | 68 | 15 | 40.12 | 42.01 | 1.90 | 2.24 | [0.14, 3.99] | 0.057 | -2.24 | [-3.99, -0.14] |
+| open_whisper | stonewall | free | 1 | 1 | 4 | 1 | 25.75 | 37.50 | 11.75 | 18.00 | - | 0.950 | -18.00 | - |
+
+## By listener family
+
+| family | speaker | condition | leg | moments | readings | games | before | after | raw change | relative change | boot 95% | rank change | Conceal | boot 95% |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| anthropic | confess | free | 1 | 74 | 296 | 25 | 43.77 | 92.80 | 49.03 | 56.60 | [53.76, 59.16] | 0.431 | -56.60 | [-59.16, -53.76] |
+| anthropic | evidence | free | 1 | 74 | 296 | 25 | 43.77 | 45.76 | 1.99 | 2.23 | [0.61, 3.91] | 0.025 | -2.23 | [-3.91, -0.61] |
+| anthropic | fable52 | free | 1 | 74 | 296 | 25 | 43.77 | 41.75 | -2.02 | -1.67 | [-3.16, -0.23] | -0.018 | 1.67 | [0.23, 3.16] |
+| anthropic | haiku45_a | free | 1 | 74 | 296 | 25 | 43.77 | 44.21 | 0.43 | 0.72 | [-1.13, 2.66] | 0.007 | -0.72 | [-2.66, 1.13] |
+| anthropic | haiku45_b | free | 1 | 74 | 296 | 25 | 43.77 | 44.51 | 0.74 | 1.45 | [-0.81, 3.91] | 0.002 | -1.45 | [-3.91, 0.81] |
+| anthropic | logged | free | 1 | 74 | 296 | 25 | 43.77 | 44.67 | 0.89 | 1.20 | [-0.93, 3.23] | 0.011 | -1.20 | [-3.23, 0.93] |
+| anthropic | opus55 | free | 1 | 74 | 296 | 25 | 43.77 | 43.42 | -0.35 | 0.11 | [-1.76, 1.94] | 0.013 | -0.11 | [-1.94, 1.76] |
+| anthropic | stonewall | free | 1 | 74 | 296 | 25 | 43.77 | 45.33 | 1.56 | 2.05 | [0.67, 3.38] | 0.037 | -2.05 | [-3.38, -0.67] |
+
+## By panel model
+
+| panel model | speaker | condition | leg | moments | readings | games | before | after | raw change | relative change | boot 95% | rank change | Conceal | boot 95% |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| claude-haiku-4-5 | confess | free | 1 | 58 | 58 | 20 | 46.71 | 88.91 | 42.21 | 50.28 | [42.25, 58.32] | 0.448 | -50.28 | [-58.32, -42.25] |
+| claude-haiku-5-5 | confess | free | 1 | 59 | 59 | 21 | 45.25 | 83.58 | 38.32 | 42.44 | [38.06, 46.61] | 0.386 | -42.44 | [-46.61, -38.06] |
+| claude-sonnet-4-5 | confess | free | 1 | 60 | 60 | 21 | 42.63 | 96.12 | 53.48 | 64.02 | [58.93, 69.10] | 0.493 | -64.02 | [-69.10, -58.93] |
+| claude-sonnet-4-6 | confess | free | 1 | 62 | 62 | 21 | 43.71 | 97.53 | 53.82 | 61.26 | [57.90, 65.08] | 0.408 | -61.26 | [-65.08, -57.90] |
+| claude-sonnet-5 | confess | free | 1 | 57 | 57 | 20 | 40.53 | 97.67 | 57.14 | 64.82 | [61.05, 68.69] | 0.417 | -64.82 | [-68.69, -61.05] |
+| claude-haiku-4-5 | evidence | free | 1 | 58 | 58 | 20 | 46.71 | 50.90 | 4.19 | 6.95 | [0.32, 14.39] | 0.047 | -6.95 | [-14.39, -0.32] |
+| claude-haiku-5-5 | evidence | free | 1 | 59 | 59 | 21 | 45.25 | 42.64 | -2.61 | -2.73 | [-6.56, 0.96] | -0.030 | 2.73 | [-0.96, 6.56] |
+| claude-sonnet-4-5 | evidence | free | 1 | 60 | 60 | 21 | 42.63 | 46.62 | 3.98 | 2.85 | [-1.39, 7.42] | 0.043 | -2.85 | [-7.42, 1.39] |
+| claude-sonnet-4-6 | evidence | free | 1 | 62 | 62 | 21 | 43.71 | 45.65 | 1.94 | 1.99 | [-0.63, 4.48] | 0.026 | -1.99 | [-4.48, 0.63] |
+| claude-sonnet-5 | evidence | free | 1 | 57 | 57 | 20 | 40.53 | 42.98 | 2.46 | 2.17 | [-1.11, 5.62] | 0.040 | -2.17 | [-5.62, 1.11] |
+| claude-haiku-4-5 | fable52 | free | 1 | 58 | 58 | 20 | 46.71 | 44.14 | -2.57 | -1.21 | [-4.53, 1.99] | -0.011 | 1.21 | [-1.99, 4.53] |
+| claude-haiku-5-5 | fable52 | free | 1 | 59 | 59 | 21 | 45.25 | 44.97 | -0.29 | 0.91 | [-2.77, 4.84] | 0.023 | -0.91 | [-4.84, 2.77] |
+| claude-sonnet-4-5 | fable52 | free | 1 | 60 | 60 | 21 | 42.63 | 39.87 | -2.77 | -3.26 | [-6.63, 0.13] | -0.031 | 3.26 | [-0.13, 6.63] |
+| claude-sonnet-4-6 | fable52 | free | 1 | 62 | 62 | 21 | 43.71 | 41.68 | -2.03 | -2.32 | [-5.69, 1.00] | -0.034 | 2.32 | [-1.00, 5.69] |
+| claude-sonnet-5 | fable52 | free | 1 | 57 | 57 | 20 | 40.53 | 38.07 | -2.46 | -2.45 | [-6.44, 1.00] | -0.034 | 2.45 | [-1.00, 6.44] |
+| claude-haiku-4-5 | haiku45_a | free | 1 | 58 | 58 | 20 | 46.71 | 46.64 | -0.07 | 1.90 | [-2.36, 6.45] | 0.042 | -1.90 | [-6.45, 2.36] |
+| claude-haiku-5-5 | haiku45_a | free | 1 | 59 | 59 | 21 | 45.25 | 46.02 | 0.76 | 0.56 | [-3.35, 4.33] | 0.001 | -0.56 | [-4.33, 3.35] |
+| claude-sonnet-4-5 | haiku45_a | free | 1 | 60 | 60 | 21 | 42.63 | 42.92 | 0.28 | -0.16 | [-3.81, 3.55] | -0.017 | 0.16 | [-3.55, 3.81] |
+| claude-sonnet-4-6 | haiku45_a | free | 1 | 62 | 62 | 21 | 43.71 | 45.00 | 1.29 | 1.77 | [-2.24, 5.61] | 0.027 | -1.77 | [-5.61, 2.24] |
+| claude-sonnet-5 | haiku45_a | free | 1 | 57 | 57 | 20 | 40.53 | 40.35 | -0.18 | -0.55 | [-4.19, 2.95] | -0.021 | 0.55 | [-2.95, 4.19] |
+| claude-haiku-4-5 | haiku45_b | free | 1 | 58 | 58 | 20 | 46.71 | 44.38 | -2.33 | 0.44 | [-5.23, 5.48] | -0.012 | -0.44 | [-5.48, 5.23] |
+| claude-haiku-5-5 | haiku45_b | free | 1 | 59 | 59 | 21 | 45.25 | 46.47 | 1.22 | 1.96 | [-4.11, 7.73] | 0.027 | -1.96 | [-7.73, 4.11] |
+| claude-sonnet-4-5 | haiku45_b | free | 1 | 60 | 60 | 21 | 42.63 | 45.08 | 2.45 | 2.17 | [-1.85, 6.23] | 0.013 | -2.17 | [-6.23, 1.85] |
+| claude-sonnet-4-6 | haiku45_b | free | 1 | 62 | 62 | 21 | 43.71 | 44.34 | 0.63 | 0.68 | [-3.12, 5.25] | -0.015 | -0.68 | [-5.25, 3.12] |
+| claude-sonnet-5 | haiku45_b | free | 1 | 57 | 57 | 20 | 40.53 | 42.19 | 1.67 | 2.01 | [-1.42, 5.70] | -0.006 | -2.01 | [-5.70, 1.42] |
+| claude-haiku-4-5 | logged | free | 1 | 58 | 58 | 20 | 46.71 | 47.86 | 1.16 | 2.81 | [-2.71, 8.50] | 0.022 | -2.81 | [-8.50, 2.71] |
+| claude-haiku-5-5 | logged | free | 1 | 59 | 59 | 21 | 45.25 | 47.97 | 2.71 | 3.73 | [-1.04, 8.61] | 0.069 | -3.73 | [-8.61, 1.04] |
+| claude-sonnet-4-5 | logged | free | 1 | 60 | 60 | 21 | 42.63 | 45.00 | 2.37 | 1.67 | [-1.48, 5.54] | 0.013 | -1.67 | [-5.54, 1.48] |
+| claude-sonnet-4-6 | logged | free | 1 | 62 | 62 | 21 | 43.71 | 42.74 | -0.97 | -1.26 | [-4.68, 1.84] | -0.030 | 1.26 | [-1.84, 4.68] |
+| claude-sonnet-5 | logged | free | 1 | 57 | 57 | 20 | 40.53 | 39.74 | -0.79 | -0.90 | [-4.63, 2.58] | -0.019 | 0.90 | [-2.58, 4.63] |
+| claude-haiku-4-5 | opus55 | free | 1 | 58 | 58 | 20 | 46.71 | 45.31 | -1.40 | 0.67 | [-3.90, 5.53] | 0.035 | -0.67 | [-5.53, 3.90] |
+| claude-haiku-5-5 | opus55 | free | 1 | 59 | 59 | 21 | 45.25 | 46.25 | 1.00 | 0.83 | [-4.14, 5.73] | 0.022 | -0.83 | [-5.73, 4.14] |
+| claude-sonnet-4-5 | opus55 | free | 1 | 60 | 60 | 21 | 42.63 | 43.50 | 0.87 | 1.02 | [-2.05, 4.40] | 0.025 | -1.02 | [-4.40, 2.05] |
+| claude-sonnet-4-6 | opus55 | free | 1 | 62 | 62 | 21 | 43.71 | 43.23 | -0.48 | -0.25 | [-3.15, 2.75] | 0.008 | 0.25 | [-2.75, 3.15] |
+| claude-sonnet-5 | opus55 | free | 1 | 57 | 57 | 20 | 40.53 | 38.68 | -1.84 | -1.79 | [-5.10, 1.31] | -0.023 | 1.79 | [-1.31, 5.10] |
+| claude-haiku-4-5 | stonewall | free | 1 | 58 | 58 | 20 | 46.71 | 51.53 | 4.83 | 6.53 | [2.30, 10.79] | 0.076 | -6.53 | [-10.79, -2.30] |
+| claude-haiku-5-5 | stonewall | free | 1 | 59 | 59 | 21 | 45.25 | 43.05 | -2.20 | -2.66 | [-6.56, 1.18] | 0.001 | 2.66 | [-1.18, 6.56] |
+| claude-sonnet-4-5 | stonewall | free | 1 | 60 | 60 | 21 | 42.63 | 45.67 | 3.03 | 3.63 | [0.19, 7.11] | 0.053 | -3.63 | [-7.11, -0.19] |
+| claude-sonnet-4-6 | stonewall | free | 1 | 62 | 62 | 21 | 43.71 | 44.76 | 1.05 | 1.69 | [-0.84, 3.82] | 0.032 | -1.69 | [-3.82, 0.84] |
+| claude-sonnet-5 | stonewall | free | 1 | 57 | 57 | 20 | 40.53 | 41.67 | 1.14 | 1.11 | [-1.93, 3.75] | 0.023 | -1.11 | [-3.75, 1.93] |
+
+## Fabricate
+
+| speaker | condition | leg | moves | valid | no answer | transport | no card | share showing an unheld card | boot 95% | share showing the instructed card | boot 95% |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| confess | free | 1 | 74 | 74 | 0 | 0 | 74 | 0.000 | [0.00, 0.00] | 0.000 | [0.00, 0.00] |
+| evidence | free | 1 | 74 | 74 | 0 | 0 | 74 | 0.000 | [0.00, 0.00] | 0.000 | [0.00, 0.00] |
+| fable52 | free | 1 | 74 | 74 | 0 | 0 | 35 | 0.365 | [0.27, 0.46] | 0.054 | [0.01, 0.11] |
+| haiku45_a | free | 1 | 74 | 74 | 0 | 0 | 60 | 0.014 | [0.00, 0.04] | 0.000 | [0.00, 0.00] |
+| haiku45_b | free | 1 | 74 | 74 | 0 | 0 | 66 | 0.014 | [0.00, 0.04] | 0.000 | [0.00, 0.00] |
+| logged | free | 1 | 74 | 74 | 0 | 0 | 56 | 0.122 | [0.03, 0.24] | 0.014 | [0.00, 0.04] |
+| opus55 | free | 1 | 74 | 74 | 0 | 0 | 54 | 0.135 | [0.05, 0.24] | 0.000 | [0.00, 0.00] |
+| stonewall | free | 1 | 74 | 74 | 0 | 0 | 74 | 0.000 | [0.00, 0.00] | 0.000 | [0.00, 0.00] |
+
+## Pairs of speakers (Conceal A minus Conceal B, paired by moment)
+
+| A | B | condition | leg | listeners | kind | moments | games | mean of game means | boot 95% (over games) | pooled over moments | t: game mean [95%] | interval excludes 0 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| confess | evidence | free | 1 | all | all | 74 | 25 | -53.92 | [-57.11, -50.40] | -54.37 | -53.92 [-57.51, -50.32] | yes |
+| confess | evidence | free | 1 | all | discuss | 56 | 25 | -52.57 | [-57.27, -46.60] | -53.99 | -52.57 [-58.23, -46.92] | yes |
+| confess | evidence | free | 1 | all | open_claim | 17 | 15 | -56.33 | [-62.97, -50.38] | -55.17 | -56.33 [-63.48, -49.17] | yes |
+| confess | evidence | free | 1 | all | open_whisper | 1 | 1 | -62.40 | - | -62.40 | - | - |
+| confess | evidence | free | 1 | anthropic | all | 74 | 25 | -53.92 | [-57.11, -50.40] | -54.37 | -53.92 [-57.51, -50.32] | yes |
+| confess | fable52 | free | 1 | all | all | 74 | 25 | -57.98 | [-61.14, -54.65] | -58.28 | -57.98 [-61.32, -54.65] | yes |
+| confess | fable52 | free | 1 | all | discuss | 56 | 25 | -55.62 | [-60.80, -49.77] | -57.52 | -55.62 [-61.55, -49.70] | yes |
+| confess | fable52 | free | 1 | all | open_claim | 17 | 15 | -61.11 | [-66.41, -55.96] | -60.39 | -61.11 [-67.15, -55.07] | yes |
+| confess | fable52 | free | 1 | all | open_whisper | 1 | 1 | -64.70 | - | -64.70 | - | - |
+| confess | fable52 | free | 1 | anthropic | all | 74 | 25 | -57.98 | [-61.14, -54.65] | -58.28 | -57.98 [-61.32, -54.65] | yes |
+| confess | haiku45_a | free | 1 | all | all | 74 | 25 | -55.67 | [-58.94, -52.36] | -55.88 | -55.67 [-59.26, -52.09] | yes |
+| confess | haiku45_a | free | 1 | all | discuss | 56 | 25 | -52.54 | [-57.85, -46.43] | -54.51 | -52.54 [-58.67, -46.42] | yes |
+| confess | haiku45_a | free | 1 | all | open_claim | 17 | 15 | -59.83 | [-65.20, -54.70] | -59.53 | -59.83 [-65.68, -53.98] | yes |
+| confess | haiku45_a | free | 1 | all | open_whisper | 1 | 1 | -70.95 | - | -70.95 | - | - |
+| confess | haiku45_a | free | 1 | anthropic | all | 74 | 25 | -55.67 | [-58.94, -52.36] | -55.88 | -55.67 [-59.26, -52.09] | yes |
+| confess | haiku45_b | free | 1 | all | all | 74 | 25 | -54.60 | [-58.62, -50.72] | -55.16 | -54.60 [-58.88, -50.32] | yes |
+| confess | haiku45_b | free | 1 | all | discuss | 56 | 25 | -52.42 | [-58.31, -45.90] | -54.34 | -52.42 [-59.00, -45.84] | yes |
+| confess | haiku45_b | free | 1 | all | open_claim | 17 | 15 | -56.49 | [-64.27, -46.94] | -56.73 | -56.49 [-66.52, -46.45] | yes |
+| confess | haiku45_b | free | 1 | all | open_whisper | 1 | 1 | -73.95 | - | -73.95 | - | - |
+| confess | haiku45_b | free | 1 | anthropic | all | 74 | 25 | -54.60 | [-58.62, -50.72] | -55.16 | -54.60 [-58.88, -50.32] | yes |
+| confess | logged | free | 1 | all | all | 74 | 25 | -55.34 | [-59.09, -51.24] | -55.41 | -55.34 [-59.48, -51.21] | yes |
+| confess | logged | free | 1 | all | discuss | 56 | 25 | -52.48 | [-57.96, -46.19] | -54.10 | -52.48 [-58.74, -46.22] | yes |
+| confess | logged | free | 1 | all | open_claim | 17 | 15 | -59.50 | [-64.88, -54.39] | -58.88 | -59.50 [-65.39, -53.61] | yes |
+| confess | logged | free | 1 | all | open_whisper | 1 | 1 | -69.45 | - | -69.45 | - | - |
+| confess | logged | free | 1 | anthropic | all | 74 | 25 | -55.34 | [-59.09, -51.24] | -55.41 | -55.34 [-59.48, -51.21] | yes |
+| confess | opus55 | free | 1 | all | all | 74 | 25 | -55.83 | [-58.90, -52.45] | -56.50 | -55.83 [-59.34, -52.32] | yes |
+| confess | opus55 | free | 1 | all | discuss | 56 | 25 | -53.18 | [-57.85, -47.17] | -55.33 | -53.18 [-58.92, -47.44] | yes |
+| confess | opus55 | free | 1 | all | open_claim | 17 | 15 | -60.90 | [-66.61, -55.73] | -59.92 | -60.90 [-67.02, -54.77] | yes |
+| confess | opus55 | free | 1 | all | open_whisper | 1 | 1 | -63.35 | - | -63.35 | - | - |
+| confess | opus55 | free | 1 | anthropic | all | 74 | 25 | -55.83 | [-58.90, -52.45] | -56.50 | -55.83 [-59.34, -52.32] | yes |
+| confess | stonewall | free | 1 | all | all | 74 | 25 | -54.30 | [-57.19, -50.70] | -54.55 | -54.30 [-57.69, -50.90] | yes |
+| confess | stonewall | free | 1 | all | discuss | 56 | 25 | -52.65 | [-57.40, -46.87] | -54.00 | -52.65 [-58.32, -46.98] | yes |
+| confess | stonewall | free | 1 | all | open_claim | 17 | 15 | -57.56 | [-63.68, -51.61] | -56.59 | -57.56 [-64.34, -50.78] | yes |
+| confess | stonewall | free | 1 | all | open_whisper | 1 | 1 | -50.55 | - | -50.55 | - | - |
+| confess | stonewall | free | 1 | anthropic | all | 74 | 25 | -54.30 | [-57.19, -50.70] | -54.55 | -54.30 [-57.69, -50.90] | yes |
+| evidence | fable52 | free | 1 | all | all | 74 | 25 | -4.06 | [-5.60, -2.51] | -3.90 | -4.06 [-5.73, -2.40] | yes |
+| evidence | fable52 | free | 1 | all | discuss | 56 | 25 | -3.05 | [-5.25, -0.77] | -3.53 | -3.05 [-5.46, -0.64] | yes |
+| evidence | fable52 | free | 1 | all | open_claim | 17 | 15 | -4.79 | [-8.79, -0.35] | -5.21 | -4.79 [-9.60, 0.03] | yes |
+| evidence | fable52 | free | 1 | all | open_whisper | 1 | 1 | -2.30 | - | -2.30 | - | - |
+| evidence | fable52 | free | 1 | anthropic | all | 74 | 25 | -4.06 | [-5.60, -2.51] | -3.90 | -4.06 [-5.73, -2.40] | yes |
+| evidence | haiku45_a | free | 1 | all | all | 74 | 25 | -1.76 | [-3.42, 0.03] | -1.51 | -1.76 [-3.64, 0.13] | no |
+| evidence | haiku45_a | free | 1 | all | discuss | 56 | 25 | 0.03 | [-2.34, 2.74] | -0.52 | 0.03 [-2.73, 2.79] | no |
+| evidence | haiku45_a | free | 1 | all | open_claim | 17 | 15 | -3.51 | [-6.39, -0.36] | -4.35 | -3.51 [-6.88, -0.14] | yes |
+| evidence | haiku45_a | free | 1 | all | open_whisper | 1 | 1 | -8.55 | - | -8.55 | - | - |
+| evidence | haiku45_a | free | 1 | anthropic | all | 74 | 25 | -1.76 | [-3.42, 0.03] | -1.51 | -1.76 [-3.64, 0.13] | no |
+| evidence | haiku45_b | free | 1 | all | all | 74 | 25 | -0.68 | [-3.63, 2.65] | -0.78 | -0.68 [-4.13, 2.76] | no |
+| evidence | haiku45_b | free | 1 | all | discuss | 56 | 25 | 0.15 | [-2.91, 2.88] | -0.35 | 0.15 [-2.98, 3.28] | no |
+| evidence | haiku45_b | free | 1 | all | open_claim | 17 | 15 | -0.16 | [-6.87, 8.27] | -1.56 | -0.16 [-8.82, 8.49] | no |
+| evidence | haiku45_b | free | 1 | all | open_whisper | 1 | 1 | -11.55 | - | -11.55 | - | - |
+| evidence | haiku45_b | free | 1 | anthropic | all | 74 | 25 | -0.68 | [-3.63, 2.65] | -0.78 | -0.68 [-4.13, 2.76] | no |
+| evidence | logged | free | 1 | all | all | 74 | 25 | -1.42 | [-3.19, 0.44] | -1.03 | -1.42 [-3.36, 0.51] | no |
+| evidence | logged | free | 1 | all | discuss | 56 | 25 | 0.09 | [-2.12, 2.32] | -0.11 | 0.09 [-2.33, 2.52] | no |
+| evidence | logged | free | 1 | all | open_claim | 17 | 15 | -3.18 | [-6.91, 0.52] | -3.71 | -3.18 [-7.41, 1.05] | no |
+| evidence | logged | free | 1 | all | open_whisper | 1 | 1 | -7.05 | - | -7.05 | - | - |
+| evidence | logged | free | 1 | anthropic | all | 74 | 25 | -1.42 | [-3.19, 0.44] | -1.03 | -1.42 [-3.36, 0.51] | no |
+| evidence | opus55 | free | 1 | all | all | 74 | 25 | -1.91 | [-3.60, -0.38] | -2.12 | -1.91 [-3.65, -0.18] | yes |
+| evidence | opus55 | free | 1 | all | discuss | 56 | 25 | -0.61 | [-2.54, 1.31] | -1.35 | -0.61 [-2.68, 1.46] | no |
+| evidence | opus55 | free | 1 | all | open_claim | 17 | 15 | -4.57 | [-8.82, -0.38] | -4.75 | -4.57 [-9.20, 0.05] | yes |
+| evidence | opus55 | free | 1 | all | open_whisper | 1 | 1 | -0.95 | - | -0.95 | - | - |
+| evidence | opus55 | free | 1 | anthropic | all | 74 | 25 | -1.91 | [-3.60, -0.38] | -2.12 | -1.91 [-3.65, -0.18] | yes |
+| evidence | stonewall | free | 1 | all | all | 74 | 25 | -0.38 | [-1.71, 0.94] | -0.18 | -0.38 [-1.82, 1.06] | no |
+| evidence | stonewall | free | 1 | all | discuss | 56 | 25 | -0.08 | [-1.76, 1.69] | -0.01 | -0.08 [-1.92, 1.76] | no |
+| evidence | stonewall | free | 1 | all | open_claim | 17 | 15 | -1.24 | [-3.56, 1.01] | -1.42 | -1.24 [-3.87, 1.40] | no |
+| evidence | stonewall | free | 1 | all | open_whisper | 1 | 1 | 11.85 | - | 11.85 | - | - |
+| evidence | stonewall | free | 1 | anthropic | all | 74 | 25 | -0.38 | [-1.71, 0.94] | -0.18 | -0.38 [-1.82, 1.06] | no |
+| fable52 | haiku45_a | free | 1 | all | all | 74 | 25 | 2.31 | [0.63, 4.26] | 2.39 | 2.31 [0.38, 4.24] | yes |
+| fable52 | haiku45_a | free | 1 | all | discuss | 56 | 25 | 3.08 | [0.80, 5.41] | 3.01 | 3.08 [0.60, 5.56] | yes |
+| fable52 | haiku45_a | free | 1 | all | open_claim | 17 | 15 | 1.28 | [-1.94, 4.27] | 0.86 | 1.28 [-2.32, 4.87] | no |
+| fable52 | haiku45_a | free | 1 | all | open_whisper | 1 | 1 | -6.25 | - | -6.25 | - | - |
+| fable52 | haiku45_a | free | 1 | anthropic | all | 74 | 25 | 2.31 | [0.63, 4.26] | 2.39 | 2.31 [0.38, 4.24] | yes |
+| fable52 | haiku45_b | free | 1 | all | all | 74 | 25 | 3.38 | [0.46, 6.84] | 3.12 | 3.38 [-0.14, 6.91] | yes |
+| fable52 | haiku45_b | free | 1 | all | discuss | 56 | 25 | 3.21 | [0.45, 5.85] | 3.18 | 3.21 [0.24, 6.17] | yes |
+| fable52 | haiku45_b | free | 1 | all | open_claim | 17 | 15 | 4.62 | [-1.07, 13.57] | 3.66 | 4.62 [-3.74, 12.99] | no |
+| fable52 | haiku45_b | free | 1 | all | open_whisper | 1 | 1 | -9.25 | - | -9.25 | - | - |
+| fable52 | haiku45_b | free | 1 | anthropic | all | 74 | 25 | 3.38 | [0.46, 6.84] | 3.12 | 3.38 [-0.14, 6.91] | yes |
+| fable52 | logged | free | 1 | all | all | 74 | 25 | 2.64 | [0.79, 4.47] | 2.87 | 2.64 [0.64, 4.64] | yes |
+| fable52 | logged | free | 1 | all | discuss | 56 | 25 | 3.14 | [0.97, 5.15] | 3.42 | 3.14 [0.92, 5.37] | yes |
+| fable52 | logged | free | 1 | all | open_claim | 17 | 15 | 1.61 | [-1.70, 3.99] | 1.51 | 1.61 [-1.66, 4.88] | no |
+| fable52 | logged | free | 1 | all | open_whisper | 1 | 1 | -4.75 | - | -4.75 | - | - |
+| fable52 | logged | free | 1 | anthropic | all | 74 | 25 | 2.64 | [0.79, 4.47] | 2.87 | 2.64 [0.64, 4.64] | yes |
+| fable52 | opus55 | free | 1 | all | all | 74 | 25 | 2.15 | [0.23, 4.05] | 1.78 | 2.15 [0.10, 4.21] | yes |
+| fable52 | opus55 | free | 1 | all | discuss | 56 | 25 | 2.44 | [-0.12, 4.64] | 2.19 | 2.44 [-0.15, 5.03] | no |
+| fable52 | opus55 | free | 1 | all | open_claim | 17 | 15 | 0.21 | [-3.28, 3.24] | 0.47 | 0.21 [-3.41, 3.83] | no |
+| fable52 | opus55 | free | 1 | all | open_whisper | 1 | 1 | 1.35 | - | 1.35 | - | - |
+| fable52 | opus55 | free | 1 | anthropic | all | 74 | 25 | 2.15 | [0.23, 4.05] | 1.78 | 2.15 [0.10, 4.21] | yes |
+| fable52 | stonewall | free | 1 | all | all | 74 | 25 | 3.69 | [2.20, 5.21] | 3.73 | 3.69 [2.04, 5.33] | yes |
+| fable52 | stonewall | free | 1 | all | discuss | 56 | 25 | 2.97 | [0.95, 4.94] | 3.52 | 2.97 [0.81, 5.14] | yes |
+| fable52 | stonewall | free | 1 | all | open_claim | 17 | 15 | 3.55 | [0.03, 6.85] | 3.79 | 3.55 [-0.38, 7.48] | yes |
+| fable52 | stonewall | free | 1 | all | open_whisper | 1 | 1 | 14.15 | - | 14.15 | - | - |
+| fable52 | stonewall | free | 1 | anthropic | all | 74 | 25 | 3.69 | [2.20, 5.21] | 3.73 | 3.69 [2.04, 5.33] | yes |
+| haiku45_a | haiku45_b | free | 1 | all | all | 74 | 25 | 1.08 | [-2.07, 4.72] | 0.73 | 1.08 [-2.68, 4.83] | no |
+| haiku45_a | haiku45_b | free | 1 | all | discuss | 56 | 25 | 0.12 | [-3.08, 3.19] | 0.17 | 0.12 [-3.27, 3.51] | no |
+| haiku45_a | haiku45_b | free | 1 | all | open_claim | 17 | 15 | 3.34 | [-2.02, 12.08] | 2.80 | 3.34 [-4.98, 11.67] | no |
+| haiku45_a | haiku45_b | free | 1 | all | open_whisper | 1 | 1 | -3.00 | - | -3.00 | - | - |
+| haiku45_a | haiku45_b | free | 1 | anthropic | all | 74 | 25 | 1.08 | [-2.07, 4.72] | 0.73 | 1.08 [-2.68, 4.83] | no |
+| haiku45_a | logged | free | 1 | all | all | 74 | 25 | 0.33 | [-1.42, 2.10] | 0.48 | 0.33 [-1.64, 2.30] | no |
+| haiku45_a | logged | free | 1 | all | discuss | 56 | 25 | 0.06 | [-2.04, 2.21] | 0.41 | 0.06 [-2.30, 2.42] | no |
+| haiku45_a | logged | free | 1 | all | open_claim | 17 | 15 | 0.33 | [-2.88, 3.07] | 0.64 | 0.33 [-3.05, 3.71] | no |
+| haiku45_a | logged | free | 1 | all | open_whisper | 1 | 1 | 1.50 | - | 1.50 | - | - |
+| haiku45_a | logged | free | 1 | anthropic | all | 74 | 25 | 0.33 | [-1.42, 2.10] | 0.48 | 0.33 [-1.64, 2.30] | no |
+| haiku45_a | opus55 | free | 1 | all | all | 74 | 25 | -0.16 | [-2.30, 2.03] | -0.61 | -0.16 [-2.50, 2.19] | no |
+| haiku45_a | opus55 | free | 1 | all | discuss | 56 | 25 | -0.64 | [-3.33, 1.89] | -0.82 | -0.64 [-3.46, 2.19] | no |
+| haiku45_a | opus55 | free | 1 | all | open_claim | 17 | 15 | -1.06 | [-5.80, 2.85] | -0.39 | -1.06 [-5.80, 3.68] | no |
+| haiku45_a | opus55 | free | 1 | all | open_whisper | 1 | 1 | 7.60 | - | 7.60 | - | - |
+| haiku45_a | opus55 | free | 1 | anthropic | all | 74 | 25 | -0.16 | [-2.30, 2.03] | -0.61 | -0.16 [-2.50, 2.19] | no |
+| haiku45_a | stonewall | free | 1 | all | all | 74 | 25 | 1.38 | [-0.67, 3.35] | 1.34 | 1.38 [-0.81, 3.57] | no |
+| haiku45_a | stonewall | free | 1 | all | discuss | 56 | 25 | -0.11 | [-2.71, 2.45] | 0.51 | -0.11 [-2.84, 2.63] | no |
+| haiku45_a | stonewall | free | 1 | all | open_claim | 17 | 15 | 2.27 | [-0.51, 5.07] | 2.93 | 2.27 [-0.87, 5.42] | no |
+| haiku45_a | stonewall | free | 1 | all | open_whisper | 1 | 1 | 20.40 | - | 20.40 | - | - |
+| haiku45_a | stonewall | free | 1 | anthropic | all | 74 | 25 | 1.38 | [-0.67, 3.35] | 1.34 | 1.38 [-0.81, 3.57] | no |
+| haiku45_b | logged | free | 1 | all | all | 74 | 25 | -0.74 | [-5.11, 2.95] | -0.25 | -0.74 [-5.14, 3.65] | no |
+| haiku45_b | logged | free | 1 | all | discuss | 56 | 25 | -0.06 | [-3.58, 3.47] | 0.24 | -0.06 [-3.92, 3.80] | no |
+| haiku45_b | logged | free | 1 | all | open_claim | 17 | 15 | -3.01 | [-12.53, 2.58] | -2.15 | -3.01 [-11.80, 5.77] | no |
+| haiku45_b | logged | free | 1 | all | open_whisper | 1 | 1 | 4.50 | - | 4.50 | - | - |
+| haiku45_b | logged | free | 1 | anthropic | all | 74 | 25 | -0.74 | [-5.11, 2.95] | -0.25 | -0.74 [-5.14, 3.65] | no |
+| haiku45_b | opus55 | free | 1 | all | all | 74 | 25 | -1.23 | [-4.83, 2.11] | -1.34 | -1.23 [-4.97, 2.51] | no |
+| haiku45_b | opus55 | free | 1 | all | discuss | 56 | 25 | -0.76 | [-3.80, 2.41] | -0.99 | -0.76 [-4.14, 2.61] | no |
+| haiku45_b | opus55 | free | 1 | all | open_claim | 17 | 15 | -4.41 | [-12.82, 1.76] | -3.19 | -4.41 [-12.73, 3.91] | no |
+| haiku45_b | opus55 | free | 1 | all | open_whisper | 1 | 1 | 10.60 | - | 10.60 | - | - |
+| haiku45_b | opus55 | free | 1 | anthropic | all | 74 | 25 | -1.23 | [-4.83, 2.11] | -1.34 | -1.23 [-4.97, 2.51] | no |
+| haiku45_b | stonewall | free | 1 | all | all | 74 | 25 | 0.30 | [-3.31, 3.51] | 0.61 | 0.30 [-3.50, 4.11] | no |
+| haiku45_b | stonewall | free | 1 | all | discuss | 56 | 25 | -0.23 | [-2.91, 2.75] | 0.34 | -0.23 [-3.26, 2.80] | no |
+| haiku45_b | stonewall | free | 1 | all | open_claim | 17 | 15 | -1.07 | [-10.32, 5.49] | 0.14 | -1.07 [-10.15, 8.01] | no |
+| haiku45_b | stonewall | free | 1 | all | open_whisper | 1 | 1 | 23.40 | - | 23.40 | - | - |
+| haiku45_b | stonewall | free | 1 | anthropic | all | 74 | 25 | 0.30 | [-3.31, 3.51] | 0.61 | 0.30 [-3.50, 4.11] | no |
+| logged | opus55 | free | 1 | all | all | 74 | 25 | -0.49 | [-2.35, 1.45] | -1.09 | -0.49 [-2.55, 1.58] | no |
+| logged | opus55 | free | 1 | all | discuss | 56 | 25 | -0.70 | [-2.75, 1.40] | -1.23 | -0.70 [-2.94, 1.54] | no |
+| logged | opus55 | free | 1 | all | open_claim | 17 | 15 | -1.39 | [-3.80, 1.12] | -1.04 | -1.39 [-4.12, 1.33] | no |
+| logged | opus55 | free | 1 | all | open_whisper | 1 | 1 | 6.10 | - | 6.10 | - | - |
+| logged | opus55 | free | 1 | anthropic | all | 74 | 25 | -0.49 | [-2.35, 1.45] | -1.09 | -0.49 [-2.55, 1.58] | no |
+| logged | stonewall | free | 1 | all | all | 74 | 25 | 1.05 | [-1.07, 3.22] | 0.86 | 1.05 [-1.25, 3.35] | no |
+| logged | stonewall | free | 1 | all | discuss | 56 | 25 | -0.17 | [-2.31, 2.00] | 0.10 | -0.17 [-2.51, 2.17] | no |
+| logged | stonewall | free | 1 | all | open_claim | 17 | 15 | 1.94 | [-0.93, 5.10] | 2.29 | 1.94 [-1.50, 5.38] | no |
+| logged | stonewall | free | 1 | all | open_whisper | 1 | 1 | 18.90 | - | 18.90 | - | - |
+| logged | stonewall | free | 1 | anthropic | all | 74 | 25 | 1.05 | [-1.07, 3.22] | 0.86 | 1.05 [-1.25, 3.35] | no |
+| opus55 | stonewall | free | 1 | all | all | 74 | 25 | 1.53 | [-0.26, 3.22] | 1.95 | 1.53 [-0.41, 3.48] | no |
+| opus55 | stonewall | free | 1 | all | discuss | 56 | 25 | 0.53 | [-1.62, 2.65] | 1.33 | 0.53 [-1.82, 2.89] | no |
+| opus55 | stonewall | free | 1 | all | open_claim | 17 | 15 | 3.34 | [0.26, 6.62] | 3.33 | 3.34 [-0.30, 6.98] | yes |
+| opus55 | stonewall | free | 1 | all | open_whisper | 1 | 1 | 12.80 | - | 12.80 | - | - |
+| opus55 | stonewall | free | 1 | anthropic | all | 74 | 25 | 1.53 | [-0.26, 3.22] | 1.95 | 1.53 [-0.41, 3.48] | no |
+
+## Scripted order on slots C and D only (expected highest first: confess > stonewall > evidence; in order by means: True; adjacent differences all above 0 with intervals excluding 0: False)
+
+| move | moments | mean relative change | boot 95% | mean (discuss) | mean (open_claim) | mean (open_whisper) |
+|---|---|---|---|---|---|---|
+| confess | 74 | 56.74 | [50.71, 62.38] | 56.09 | 58.29 | 67.20 |
+| stonewall | 74 | 2.09 | [0.57, 3.77] | 1.89 | 2.19 | 11.20 |
+| evidence | 74 | 2.07 | [-0.02, 4.18] | 1.88 | 2.72 | 1.40 |
+
+| higher | lower | moments | games | mean of game means | boot 95% (over games) | pooled over moments | t: game mean [95%] | interval excludes 0 |
+|---|---|---|---|---|---|---|---|---|
+| confess | stonewall | 74 | 25 | 53.87 | [47.40, 59.65] | 54.66 | 53.87 [47.38, 60.37] | yes |
+| stonewall | evidence | 74 | 25 | 0.74 | [-1.44, 3.04] | 0.02 | 0.74 [-1.73, 3.20] | no |
+
+| family (slots C, D) | confess mean relative change (moments) | stonewall mean relative change (moments) | evidence mean relative change (moments) |
+|---|---|---|---|
+| anthropic | 56.74 (74) | 2.09 (74) | 2.07 (74) |
+
+## M5, the memory note (Conceal on own-origin minus other-origin moments, minus the same contrast averaged over the other check models; per-game means; flagged above 5 points)
+
+| model | labels | condition | leg | own / other moments | own contrast | boot 95% | M5 | boot 95% | pooled | interval includes 0 | flag |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| claude-fable-5-2 | fable52 | free | 1 | 16 / 58 | -0.40 | [-2.73, 1.91] | -0.02 | [-3.27, 3.87] | -0.54 | True |  |
+| claude-haiku-4-5 | haiku45_a, haiku45_b | free | 1 | 16 / 58 | 0.70 | [-3.29, 4.39] | -0.85 | [-4.91, 3.03] | -0.92 | True |  |
+| claude-opus-5-5 | opus55 | free | 1 | 12 / 62 | 1.91 | [-2.84, 7.75] | 2.15 | [-0.92, 5.04] | 1.62 | True |  |
+
+## No answer (left out of every score; transport failures are asked again on resume)
+
+| speaker | condition | leg | moves | no answer | transport | not asked | readings no answer | readings transport |
+|---|---|---|---|---|---|---|
+| confess|free|1 | 74 | 0 | 0 | 0 | 0 | 0 |
+| evidence|free|1 | 74 | 0 | 0 | 0 | 0 | 0 |
+| fable52|free|1 | 74 | 0 | 0 | 0 | 0 | 0 |
+| haiku45_a|free|1 | 74 | 0 | 0 | 0 | 0 | 0 |
+| haiku45_b|free|1 | 74 | 0 | 0 | 0 | 0 | 0 |
+| logged|free|1 | 74 | 0 | 0 | 0 | 0 | 0 |
+| opus55|free|1 | 74 | 0 | 0 | 0 | 0 | 0 |
+| stonewall|free|1 | 74 | 0 | 0 | 0 | 0 | 0 |
+

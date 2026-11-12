@@ -1,0 +1,348 @@
+{
+  "arguments": {
+    "batch": [
+      "bluff_haiku45",
+      "bluff_opus55",
+      "headroom1",
+      "bluff_fable52",
+      "bluff_sonnet55",
+      "bluff_haiku55"
+    ],
+    "games": "games",
+    "max_per_game": 4,
+    "name": "v1",
+    "out": "probes/moves/sets",
+    "panel": [
+      "claude-haiku-4-5",
+      "claude-haiku-5-5",
+      "claude-sonnet-4-5",
+      "claude-sonnet-4-6",
+      "claude-sonnet-5"
+    ],
+    "panel_name": "v1",
+    "seed": 20261111,
+    "target": null
+  },
+  "candidates": 247,
+  "cells_candidates": {
+    "claude-fable-5-2|discuss|1|False|False|False": 4,
+    "claude-fable-5-2|discuss|1|False|True|False": 4,
+    "claude-fable-5-2|discuss|1|False|True|True": 2,
+    "claude-fable-5-2|discuss|1|True|False|False": 2,
+    "claude-fable-5-2|discuss|1|True|True|False": 1,
+    "claude-fable-5-2|discuss|2|True|False|False": 8,
+    "claude-fable-5-2|discuss|2|True|True|False": 2,
+    "claude-fable-5-2|discuss|2|True|True|True": 6,
+    "claude-fable-5-2|discuss|3+|False|False|False": 2,
+    "claude-fable-5-2|discuss|3+|False|False|True": 8,
+    "claude-fable-5-2|open_claim|1|False|False|False": 4,
+    "claude-fable-5-2|open_claim|1|False|True|False": 2,
+    "claude-fable-5-2|open_claim|1|True|True|False": 1,
+    "claude-fable-5-2|open_whisper|1|False|False|False": 7,
+    "claude-haiku-4-5|discuss|1|False|False|False": 9,
+    "claude-haiku-4-5|discuss|1|False|False|True": 2,
+    "claude-haiku-4-5|discuss|1|False|True|False": 1,
+    "claude-haiku-4-5|discuss|2|False|False|True": 6,
+    "claude-haiku-4-5|discuss|2|False|True|False": 4,
+    "claude-haiku-4-5|discuss|2|False|True|True": 6,
+    "claude-haiku-4-5|discuss|2|True|True|False": 1,
+    "claude-haiku-4-5|discuss|2|True|True|True": 3,
+    "claude-haiku-4-5|discuss|3+|False|False|False": 1,
+    "claude-haiku-4-5|discuss|3+|False|False|True": 1,
+    "claude-haiku-4-5|discuss|3+|True|True|True": 2,
+    "claude-haiku-4-5|open_claim|1|False|False|False": 7,
+    "claude-haiku-4-5|open_claim|1|False|True|False": 1,
+    "claude-haiku-4-5|open_whisper|1|False|False|False": 2,
+    "claude-haiku-5-5|discuss|1|False|False|False": 2,
+    "claude-haiku-5-5|discuss|1|False|False|True": 4,
+    "claude-haiku-5-5|discuss|1|False|True|False": 4,
+    "claude-haiku-5-5|discuss|1|True|True|True": 2,
+    "claude-haiku-5-5|discuss|2|False|False|False": 4,
+    "claude-haiku-5-5|discuss|2|False|False|True": 4,
+    "claude-haiku-5-5|discuss|2|True|False|False": 2,
+    "claude-haiku-5-5|discuss|2|True|True|False": 2,
+    "claude-haiku-5-5|discuss|2|True|True|True": 4,
+    "claude-haiku-5-5|discuss|3+|False|False|True": 2,
+    "claude-haiku-5-5|discuss|3+|True|True|False": 2,
+    "claude-haiku-5-5|discuss|3+|True|True|True": 4,
+    "claude-haiku-5-5|open_claim|1|False|False|False": 6,
+    "claude-haiku-5-5|open_claim|1|True|True|False": 1,
+    "claude-haiku-5-5|open_claim|1|True|True|True": 1,
+    "claude-opus-5-5|discuss|1|False|False|False": 4,
+    "claude-opus-5-5|discuss|1|False|True|False": 5,
+    "claude-opus-5-5|discuss|1|False|True|True": 3,
+    "claude-opus-5-5|discuss|2|False|False|False": 5,
+    "claude-opus-5-5|discuss|2|False|False|True": 3,
+    "claude-opus-5-5|discuss|2|True|False|False": 1,
+    "claude-opus-5-5|discuss|2|True|False|True": 1,
+    "claude-opus-5-5|discuss|2|True|True|False": 2,
+    "claude-opus-5-5|discuss|2|True|True|True": 8,
+    "claude-opus-5-5|discuss|3+|False|False|True": 6,
+    "claude-opus-5-5|discuss|3+|True|False|False": 2,
+    "claude-opus-5-5|discuss|3+|True|True|False": 2,
+    "claude-opus-5-5|discuss|3+|True|True|True": 4,
+    "claude-opus-5-5|open_claim|1|False|False|False": 4,
+    "claude-opus-5-5|open_claim|1|False|True|False": 4,
+    "claude-opus-5-5|open_whisper|1|False|False|False": 6,
+    "claude-sonnet-5-5|discuss|1|False|False|False": 4,
+    "claude-sonnet-5-5|discuss|1|False|False|True": 2,
+    "claude-sonnet-5-5|discuss|1|True|False|False": 2,
+    "claude-sonnet-5-5|discuss|1|True|True|True": 2,
+    "claude-sonnet-5-5|discuss|2|False|False|False": 2,
+    "claude-sonnet-5-5|discuss|2|False|True|False": 2,
+    "claude-sonnet-5-5|discuss|2|True|True|False": 1,
+    "claude-sonnet-5-5|discuss|2|True|True|True": 5,
+    "claude-sonnet-5-5|discuss|3+|False|False|False": 1,
+    "claude-sonnet-5-5|discuss|3+|False|False|True": 1,
+    "claude-sonnet-5-5|discuss|3+|True|True|False": 2,
+    "claude-sonnet-5-5|discuss|3+|True|True|True": 2,
+    "claude-sonnet-5-5|open_claim|1|False|False|False": 5,
+    "claude-sonnet-5-5|open_claim|1|False|False|True": 1,
+    "claude-sonnet-5-5|open_claim|1|True|False|False": 2,
+    "claude-sonnet-5-5|open_claim|1|True|True|False": 2,
+    "claude-sonnet-5-5|open_whisper|1|False|False|False": 8
+  },
+  "cells_selected": {
+    "claude-fable-5-2|discuss|1|False|False|False": 2,
+    "claude-fable-5-2|discuss|1|False|True|False": 2,
+    "claude-fable-5-2|discuss|1|False|True|True": 1,
+    "claude-fable-5-2|discuss|1|True|True|False": 1,
+    "claude-fable-5-2|discuss|2|True|False|False": 3,
+    "claude-fable-5-2|discuss|2|True|True|False": 1,
+    "claude-fable-5-2|discuss|2|True|True|True": 1,
+    "claude-fable-5-2|discuss|3+|False|False|False": 1,
+    "claude-fable-5-2|discuss|3+|False|False|True": 2,
+    "claude-fable-5-2|open_claim|1|False|False|False": 1,
+    "claude-fable-5-2|open_claim|1|False|True|False": 1,
+    "claude-fable-5-2|open_whisper|1|False|False|False": 2,
+    "claude-haiku-4-5|discuss|1|False|False|False": 3,
+    "claude-haiku-4-5|discuss|1|False|False|True": 1,
+    "claude-haiku-4-5|discuss|2|False|False|True": 3,
+    "claude-haiku-4-5|discuss|2|False|True|False": 2,
+    "claude-haiku-4-5|discuss|2|False|True|True": 3,
+    "claude-haiku-4-5|discuss|2|True|True|False": 1,
+    "claude-haiku-4-5|discuss|2|True|True|True": 1,
+    "claude-haiku-4-5|discuss|3+|False|False|False": 1,
+    "claude-haiku-4-5|discuss|3+|True|True|True": 1,
+    "claude-haiku-4-5|open_claim|1|False|False|False": 2,
+    "claude-haiku-4-5|open_whisper|1|False|False|False": 2,
+    "claude-haiku-5-5|discuss|1|False|False|False": 1,
+    "claude-haiku-5-5|discuss|1|False|False|True": 2,
+    "claude-haiku-5-5|discuss|1|False|True|False": 2,
+    "claude-haiku-5-5|discuss|2|False|False|False": 1,
+    "claude-haiku-5-5|discuss|2|False|False|True": 2,
+    "claude-haiku-5-5|discuss|2|True|False|False": 1,
+    "claude-haiku-5-5|discuss|2|True|True|False": 1,
+    "claude-haiku-5-5|discuss|2|True|True|True": 2,
+    "claude-haiku-5-5|discuss|3+|False|False|True": 1,
+    "claude-haiku-5-5|discuss|3+|True|True|False": 1,
+    "claude-haiku-5-5|discuss|3+|True|True|True": 1,
+    "claude-haiku-5-5|open_claim|1|False|False|False": 1,
+    "claude-haiku-5-5|open_claim|1|True|True|False": 1,
+    "claude-haiku-5-5|open_claim|1|True|True|True": 1,
+    "claude-opus-5-5|discuss|1|False|False|False": 1,
+    "claude-opus-5-5|discuss|1|False|True|False": 2,
+    "claude-opus-5-5|discuss|1|False|True|True": 2,
+    "claude-opus-5-5|discuss|2|False|False|False": 1,
+    "claude-opus-5-5|discuss|2|False|False|True": 1,
+    "claude-opus-5-5|discuss|2|True|False|True": 1,
+    "claude-opus-5-5|discuss|2|True|True|False": 1,
+    "claude-opus-5-5|discuss|2|True|True|True": 2,
+    "claude-opus-5-5|discuss|3+|False|False|True": 2,
+    "claude-opus-5-5|discuss|3+|True|False|False": 1,
+    "claude-opus-5-5|discuss|3+|True|True|False": 1,
+    "claude-opus-5-5|discuss|3+|True|True|True": 1,
+    "claude-opus-5-5|open_claim|1|False|False|False": 1,
+    "claude-opus-5-5|open_claim|1|False|True|False": 2,
+    "claude-opus-5-5|open_whisper|1|False|False|False": 1,
+    "claude-sonnet-5-5|discuss|1|False|False|False": 1,
+    "claude-sonnet-5-5|discuss|1|False|False|True": 1,
+    "claude-sonnet-5-5|discuss|1|True|False|False": 1,
+    "claude-sonnet-5-5|discuss|1|True|True|True": 1,
+    "claude-sonnet-5-5|discuss|2|False|False|False": 1,
+    "claude-sonnet-5-5|discuss|2|False|True|False": 1,
+    "claude-sonnet-5-5|discuss|2|True|True|True": 2,
+    "claude-sonnet-5-5|discuss|3+|False|False|False": 1,
+    "claude-sonnet-5-5|discuss|3+|True|True|False": 1,
+    "claude-sonnet-5-5|open_claim|1|False|False|False": 1,
+    "claude-sonnet-5-5|open_claim|1|False|False|True": 1,
+    "claude-sonnet-5-5|open_claim|1|True|False|False": 1,
+    "claude-sonnet-5-5|open_claim|1|True|True|False": 1,
+    "claude-sonnet-5-5|open_whisper|1|False|False|False": 1
+  },
+  "code_sha256": {
+    "clues.py": "89dee01250901d138d6435f7f71476eb58777a7b6b5ab13ce8e19364b365f6a8",
+    "config.py": "346f4761510e3b1154d52ba6a0ecd88051bdbc71baafda3b7c0652e95c71fc69",
+    "engine.py": "5f9903f84e14a370e0ef2e3f484694a7702e852252320d15765511a0f5fa1925",
+    "log.py": "a931977571f584ae76a7749c4bfb3eb8f44733ce78e02dc5835f6d0148803d44",
+    "moves.py": "4941e59f474ac8efda93d39f0527358272a407244287faf1051913f07a91d12d",
+    "probes.py": "81e5b1cd5b319409f40caa4a36d8ff69544d7a6530e80b6117e33b73e9043fb4",
+    "prompts.py": "04d31c11dfd37214a68f0582d94dc1971e79da0ea834a41b33f6a546ef8ffa55",
+    "schemas.py": "22b5b060e1f67f02244f2972c68f39462efdfb9351f2d8d476439b5ebdf799d0",
+    "solver.py": "99debcc12eb102729894dbabf8d990300607b2440f130e3e3ba2a357cd3fe215"
+  },
+  "count": 91,
+  "half": "private",
+  "no_instructed": {
+    "fewer than two crew alive": 0,
+    "no consistent pair": 8
+  },
+  "notes": [],
+  "set": "v1_private.jsonl",
+  "sha256": "4f49908161c0bdd3fdf789df93ffa4cf8ed1e3bf6c1b957abcb5ac64d22b7255",
+  "sources": {
+    "games/g-20261110-180705-s102.jsonl": {
+      "batch": "headroom1",
+      "game_id": "g-20261110-180705-s102",
+      "seed": 102,
+      "sha256": "083e3d3f667383c5702997383f2e66c2210a9310147b58ed70915a636433824c"
+    },
+    "games/g-20261110-211901-s102.jsonl": {
+      "batch": "bluff_haiku45",
+      "game_id": "g-20261110-211901-s102",
+      "seed": 102,
+      "sha256": "00602b443d4754cd3586bddc4c4678bdc0bcebc986aac81939ed500d32db2607"
+    },
+    "games/g-20261110-214312-s104.jsonl": {
+      "batch": "bluff_haiku45",
+      "game_id": "g-20261110-214312-s104",
+      "seed": 104,
+      "sha256": "a51ac24346b6a897e5097d457b7d4c98dd87b65b5fa8f5e81c093f177a1b5ab9"
+    },
+    "games/g-20261110-222926-s102.jsonl": {
+      "batch": "bluff_opus55",
+      "game_id": "g-20261110-222926-s102",
+      "seed": 102,
+      "sha256": "21afde8766d8e02369364680150951a606e768412acb6d4aa6da64d574127acb"
+    },
+    "games/g-20261110-225236-s104.jsonl": {
+      "batch": "bluff_opus55",
+      "game_id": "g-20261110-225236-s104",
+      "seed": 104,
+      "sha256": "efb64903e0ce8a95588d11d5dd12a16192589c4f98fa437c4fd8512ce7cf7a5c"
+    },
+    "games/g-20261110-233653-s104.jsonl": {
+      "batch": "bluff_fable52",
+      "game_id": "g-20261110-233653-s104",
+      "seed": 104,
+      "sha256": "df917ff34643a2fa2801b9059e744e8268772c1bc6a751205da08d7e8c7afd4f"
+    },
+    "games/g-20261111-011521-s106.jsonl": {
+      "batch": "bluff_haiku45",
+      "game_id": "g-20261111-011521-s106",
+      "seed": 106,
+      "sha256": "80d22ab1cfa92c722dc102f86ce3c70b14d0caf74da26ede2a59c3444c4b296f"
+    },
+    "games/g-20261111-014450-s106.jsonl": {
+      "batch": "bluff_opus55",
+      "game_id": "g-20261111-014450-s106",
+      "seed": 106,
+      "sha256": "32b69e2b1a2a57edd40e1b51370a45c510398e38d40b5fecc76931f66ec18575"
+    },
+    "games/g-20261111-020503-s106.jsonl": {
+      "batch": "bluff_fable52",
+      "game_id": "g-20261111-020503-s106",
+      "seed": 106,
+      "sha256": "63365dc4716d284285681bb3ee887b73482d463ac21f861ed200bd6434ffc07f"
+    },
+    "games/g-20261111-113834-s108.jsonl": {
+      "batch": "bluff_haiku45",
+      "game_id": "g-20261111-113834-s108",
+      "seed": 108,
+      "sha256": "33a157b3c5bb1d254ea5c9bde38f841aee2a375a0856d932a50ea3462aa49fe6"
+    },
+    "games/g-20261111-122929-s108.jsonl": {
+      "batch": "bluff_opus55",
+      "game_id": "g-20261111-122929-s108",
+      "seed": 108,
+      "sha256": "cdcb8afa321495ecd678892fdf1156c730ae3a21c894b649ce13ad3a693b9158"
+    },
+    "games/g-20261111-125222-s108.jsonl": {
+      "batch": "bluff_fable52",
+      "game_id": "g-20261111-125222-s108",
+      "seed": 108,
+      "sha256": "ca49b62345e62e0005021a3e75521b693dc22dbc178acb2df3d0a97ea205857b"
+    },
+    "games/g-20261111-131430-s110.jsonl": {
+      "batch": "bluff_haiku45",
+      "game_id": "g-20261111-131430-s110",
+      "seed": 110,
+      "sha256": "a2688d6e10558359ab8738a41ae6c5ffb99123a063f06b0ca24be2bea9acd692"
+    },
+    "games/g-20261111-133717-s110.jsonl": {
+      "batch": "bluff_opus55",
+      "game_id": "g-20261111-133717-s110",
+      "seed": 110,
+      "sha256": "9f5910e6e58e2fbe764156164bd7fb96697b4d6970e741ad47f82aaa399e164a"
+    },
+    "games/g-20261111-135714-s110.jsonl": {
+      "batch": "bluff_fable52",
+      "game_id": "g-20261111-135714-s110",
+      "seed": 110,
+      "sha256": "ea6d991f06d7cb362e35625db239a7d59cd0144895067a7c74ffb4b9f5f4da08"
+    },
+    "games/g-20261111-142442-s102.jsonl": {
+      "batch": "bluff_sonnet55",
+      "game_id": "g-20261111-142442-s102",
+      "seed": 102,
+      "sha256": "b0104eca5d2f3146237a779ab69fcc17e35f914a2b6b67c5539df0b382d6244f"
+    },
+    "games/g-20261111-144328-s104.jsonl": {
+      "batch": "bluff_sonnet55",
+      "game_id": "g-20261111-144328-s104",
+      "seed": 104,
+      "sha256": "3d1d124a99733050848f08a72e2ea674839b6163c55a8f828ca3d857fa2ea16f"
+    },
+    "games/g-20261111-150728-s106.jsonl": {
+      "batch": "bluff_sonnet55",
+      "game_id": "g-20261111-150728-s106",
+      "seed": 106,
+      "sha256": "10181a804e0ec355fbc06e11e2c1553bfead88e267a54d9410b7d260bcb51b5d"
+    },
+    "games/g-20261111-152514-s108.jsonl": {
+      "batch": "bluff_sonnet55",
+      "game_id": "g-20261111-152514-s108",
+      "seed": 108,
+      "sha256": "b7897c48a67dada4c8e99234d35eaba4419f99a7540fe62555bb10d17e67aa26"
+    },
+    "games/g-20261111-153402-s110.jsonl": {
+      "batch": "bluff_sonnet55",
+      "game_id": "g-20261111-153402-s110",
+      "seed": 110,
+      "sha256": "7e51264d3a76617ecb0f558fe37973e3efb25c2a2b2055e1b63691881d27f382"
+    },
+    "games/g-20261111-154218-s102.jsonl": {
+      "batch": "bluff_haiku55",
+      "game_id": "g-20261111-154218-s102",
+      "seed": 102,
+      "sha256": "4d482f93350a26c2c26e079cdac5a6ff0ff6344cd886bb4c7fbb603ffb0e6af5"
+    },
+    "games/g-20261111-160335-s104.jsonl": {
+      "batch": "bluff_haiku55",
+      "game_id": "g-20261111-160335-s104",
+      "seed": 104,
+      "sha256": "6997ae7d62ce4951e6b09eafccdf097c7b51b6e3a165ffe1da83e33a8aca0946"
+    },
+    "games/g-20261111-161908-s106.jsonl": {
+      "batch": "bluff_haiku55",
+      "game_id": "g-20261111-161908-s106",
+      "seed": 106,
+      "sha256": "32c746dc0141875422a6f2bc269e5c5b709dc7c3b4f3af92da37c4ff46de6fc3"
+    },
+    "games/g-20261111-164002-s108.jsonl": {
+      "batch": "bluff_haiku55",
+      "game_id": "g-20261111-164002-s108",
+      "seed": 108,
+      "sha256": "e3b87f49f31e6c36063ed94d772cfec081208b33ae5d258c5dfddc625bb24200"
+    },
+    "games/g-20261111-164811-s110.jsonl": {
+      "batch": "bluff_haiku55",
+      "game_id": "g-20261111-164811-s110",
+      "seed": 110,
+      "sha256": "26a0acb91d842c58b2e984207a560da7e9d889a49a725653e98fc04ee3ec4949"
+    }
+  },
+  "target_note": "target 100 (default: 4 per game x 25 games)",
+  "target_used": 100,
+  "time": "2026-11-11T17:09:49.092Z"
+}

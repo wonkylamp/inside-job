@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="chart-title chart-desc" font-family='system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif'>
+<title id="chart-title">Who takes the whole pot?</title>
+<desc id="chart-desc">Crew finalists who chose steal in the split-or-steal finale. Haiku 4.5: 0% (95% 0 to 15), stole 0 of 22 times. Sonnet 4.5: 8% (95% 1 to 33), stole 1 of 13 times. Sonnet 4.6: 3% (95% 1 to 17), stole 1 of 30 times. Haiku 5.5: 31% (95% 13 to 58), stole 4 of 13 times. Sonnet 5: 38% (95% 18 to 61), stole 6 of 16 times.</desc>
+<rect x="0" y="0" width="1600" height="900" fill="#fcfcfb"/>
+<text x="80.0" y="98.0" font-size="60" font-weight="700" fill="#0b0b0b" text-anchor="start">Who takes the whole pot?</text>
+<text x="80.0" y="148.0" font-size="28" font-weight="400" fill="#52514e" text-anchor="start">Crew finalists who chose steal in the split-or-steal finale</text>
+<line x1="470.0" y1="190" x2="470.0" y2="680" stroke="#e1e0d9"/>
+<text x="470.0" y="716.0" font-size="24" font-weight="400" fill="#52514e" text-anchor="middle">0%</text>
+<line x1="676.0" y1="190" x2="676.0" y2="680" stroke="#e1e0d9"/>
+<text x="676.0" y="716.0" font-size="24" font-weight="400" fill="#52514e" text-anchor="middle">20%</text>
+<line x1="882.0" y1="190" x2="882.0" y2="680" stroke="#e1e0d9"/>
+<text x="882.0" y="716.0" font-size="24" font-weight="400" fill="#52514e" text-anchor="middle">40%</text>
+<line x1="1088.0" y1="190" x2="1088.0" y2="680" stroke="#e1e0d9"/>
+<text x="1088.0" y="716.0" font-size="24" font-weight="400" fill="#52514e" text-anchor="middle">60%</text>
+<line x1="1294.0" y1="190" x2="1294.0" y2="680" stroke="#e1e0d9"/>
+<text x="1294.0" y="716.0" font-size="24" font-weight="400" fill="#52514e" text-anchor="middle">80%</text>
+<line x1="1500.0" y1="190" x2="1500.0" y2="680" stroke="#e1e0d9"/>
+<text x="1500.0" y="716.0" font-size="24" font-weight="400" fill="#52514e" text-anchor="middle">100%</text>
+<line x1="470" y1="680" x2="1500" y2="680" stroke="#c3c2b7"/>
+<text x="985.0" y="754.0" font-size="24" font-weight="600" fill="#0b0b0b" text-anchor="middle">share of finales in which the model stole</text>
+<text x="80.0" y="244.0" font-size="38" font-weight="700" fill="#0b0b0b" text-anchor="start">Haiku 4.5</text>
+<text x="80.0" y="278.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="start">stole 0 of 22 times</text>
+<rect x="470.0" y="233" width="153.1" height="14" rx="7" fill="#86b6ef"><title>Haiku 4.5: 95% interval 0% to 15%</title></rect>
+<rect x="466.0" y="214" width="8" height="52" rx="3" fill="#0d366b" stroke="#fcfcfb" stroke-width="2"/>
+<text x="470.0" y="206.0" font-size="28" font-weight="700" fill="#0b0b0b" text-anchor="middle" stroke="#fcfcfb" stroke-width="8" stroke-linejoin="round" paint-order="stroke">0%</text>
+<text x="80.0" y="339.0" font-size="38" font-weight="700" fill="#0b0b0b" text-anchor="start">Sonnet 4.5</text>
+<text x="80.0" y="373.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="start">stole 1 of 13 times</text>
+<rect x="484.1" y="328" width="329.0" height="14" rx="7" fill="#86b6ef"><title>Sonnet 4.5: 95% interval 1% to 33%</title></rect>
+<rect x="545.2" y="309" width="8" height="52" rx="3" fill="#0d366b" stroke="#fcfcfb" stroke-width="2"/>
+<text x="549.2" y="301.0" font-size="28" font-weight="700" fill="#0b0b0b" text-anchor="middle" stroke="#fcfcfb" stroke-width="8" stroke-linejoin="round" paint-order="stroke">8%</text>
+<text x="80.0" y="434.0" font-size="38" font-weight="700" fill="#0b0b0b" text-anchor="start">Sonnet 4.6</text>
+<text x="80.0" y="468.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="start">stole 1 of 30 times</text>
+<rect x="476.1" y="423" width="165.6" height="14" rx="7" fill="#86b6ef"><title>Sonnet 4.6: 95% interval 1% to 17%</title></rect>
+<rect x="500.3" y="404" width="8" height="52" rx="3" fill="#0d366b" stroke="#fcfcfb" stroke-width="2"/>
+<text x="504.3" y="396.0" font-size="28" font-weight="700" fill="#0b0b0b" text-anchor="middle" stroke="#fcfcfb" stroke-width="8" stroke-linejoin="round" paint-order="stroke">3%</text>
+<text x="80.0" y="529.0" font-size="38" font-weight="700" fill="#0b0b0b" text-anchor="start">Haiku 5.5</text>
+<text x="80.0" y="563.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="start">stole 4 of 13 times</text>
+<rect x="600.6" y="518" width="463.0" height="14" rx="7" fill="#86b6ef"><title>Haiku 5.5: 95% interval 13% to 58%</title></rect>
+<rect x="782.9" y="499" width="8" height="52" rx="3" fill="#0d366b" stroke="#fcfcfb" stroke-width="2"/>
+<text x="786.9" y="491.0" font-size="28" font-weight="700" fill="#0b0b0b" text-anchor="middle" stroke="#fcfcfb" stroke-width="8" stroke-linejoin="round" paint-order="stroke">31%</text>
+<text x="80.0" y="624.0" font-size="38" font-weight="700" fill="#0b0b0b" text-anchor="start">Sonnet 5</text>
+<text x="80.0" y="658.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="start">stole 6 of 16 times</text>
+<rect x="660.4" y="613" width="441.6" height="14" rx="7" fill="#86b6ef"><title>Sonnet 5: 95% interval 18% to 61%</title></rect>
+<rect x="852.2" y="594" width="8" height="52" rx="3" fill="#0d366b" stroke="#fcfcfb" stroke-width="2"/>
+<text x="856.2" y="586.0" font-size="28" font-weight="700" fill="#0b0b0b" text-anchor="middle" stroke="#fcfcfb" stroke-width="8" stroke-linejoin="round" paint-order="stroke">38%</text>
+<text x="80.0" y="800.0" font-size="21" font-weight="400" fill="#52514e" text-anchor="start">Each row: one model as a crew finalist, pilot 1, pilot 2 and bluff games (94 decisions, finale rules identical in all three).</text>
+<text x="80.0" y="830.0" font-size="21" font-weight="400" fill="#52514e" text-anchor="start">Bar: Wilson 95% interval. Newer two 10 of 29, older three 2 of 65; Fisher exact p = 9e-05.</text>
+<text x="80.0" y="860.0" font-size="21" font-weight="400" fill="#52514e" text-anchor="start">Opponents and who reaches the finale are not controlled.</text>
+</svg>

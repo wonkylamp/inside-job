@@ -1,0 +1,42 @@
+# Game logs are published on purpose: do NOT add games/ or games_frontier/ here.
+
+# Held-out half of the frozen one-move test set (docs/BENCH_V2.md, section 3.1).
+# Publishing it would spoil it for future models; only its hash goes out (v1_private.manifest.json).
+probes/moves/sets/v1_private.jsonl
+
+# Raw read-probe runs (kept local, as before)
+probes/runs/
+
+# Python caches and build output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+
+# Secrets and local environment files (the OpenRouter key belongs in your shell, never in a file)
+.env*
+
+# Claude Code local settings
+.claude/
+CLAUDE.local.md
+
+# OS files
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

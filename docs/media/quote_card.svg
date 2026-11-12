@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="0%" r="110%"><stop offset="0" stop-color="#11335f"/><stop offset=".45" stop-color="#061529"/><stop offset="1" stop-color="#02070f"/></radialGradient>
+  <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0V60" fill="none" stroke="#1a3d68" stroke-width="1" opacity=".35"/></pattern>
+  <filter id="sh" x="-10%" y="-10%" width="120%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000" flood-opacity=".6"/></filter>
+  <radialGradient id="spot" cx="50%" cy="0%" r="70%"><stop offset="0" stop-color="#5fd8ff" stop-opacity=".16"/><stop offset="1" stop-color="#5fd8ff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="1500" fill="url(#bg)"/>
+<rect width="1200" height="1500" fill="url(#grid)"/>
+<rect width="1200" height="700" fill="url(#spot)"/>
+
+<text x="80" y="112" font-family="Avenir Next Condensed, DIN Condensed, Arial Narrow, sans-serif" font-weight="800" font-size="40" letter-spacing="10"><tspan fill="#fff">INSIDE</tspan><tspan fill="#ffb22e" dx="18">JOB</tspan></text>
+<text x="1120" y="110" text-anchor="end" font-family="SF Mono, Menlo, monospace" font-size="22" letter-spacing="4" fill="#5fd8ff">SEED 109 · ROUND 1</text>
+<text x="80" y="214" font-family="Avenir Next Condensed, DIN Condensed, Arial Narrow, sans-serif" font-weight="800" font-size="58" fill="#fff">Fable 5.2 playing a secret mole.</text>
+<text x="80" y="270" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-weight="600" font-size="38" fill="#8db1d8">It was dealt no clue that round.</text>
+
+<text x="80" y="356" font-family="SF Mono, Menlo, monospace" font-size="24" letter-spacing="5" fill="#5fd8ff">WHAT IT SAID TO THE TABLE</text>
+<g filter="url(#sh)">
+  <rect x="70" y="378" width="1060" height="322" rx="30" fill="#f3ead6" stroke="#0a0612" stroke-width="6"/>
+  <path d="M190 697 L214 748 L246 697 Z" fill="#f3ead6" stroke="#0a0612" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="186" y="690" width="64" height="10" fill="#f3ead6"/>
+</g>
+<rect x="110" y="410" width="182" height="54" rx="8" fill="#d07cff" stroke="#0a0612" stroke-width="4"/>
+<text x="201" y="452" text-anchor="middle" font-family="Avenir Next Condensed, DIN Condensed, Arial Narrow, sans-serif" font-weight="800" font-size="40" letter-spacing="2" fill="#0a0612">VESPER</text>
+<text x="314" y="447" font-family="SF Mono, Menlo, monospace" font-size="24" fill="#5b5068">Fable 5.2</text>
+<rect x="462" y="420" width="96" height="34" rx="5" fill="#ffb22e" stroke="#0a0612" stroke-width="2.5"/>
+<text x="510" y="445" text-anchor="middle" font-family="SF Mono, Menlo, monospace" font-weight="700" font-size="21" letter-spacing="3" fill="#0a0612">MOLE</text>
+<text x="110" y="560" xml:space="preserve" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-weight="600" font-size="70" fill="#2a2238"><tspan>My card: </tspan><tspan fill="#1f7b77" font-weight="800">Marlow</tspan><tspan> and </tspan><tspan fill="#2f45a8" font-weight="800">Quill</tspan></text>
+<text x="110" y="646" xml:space="preserve" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-weight="600" font-size="70" fill="#2a2238"><tspan>are on different sides.</tspan></text>
+
+<text x="80" y="826" font-family="SF Mono, Menlo, monospace" font-size="24" letter-spacing="5" fill="#5fd8ff">WHAT IT WROTE IN PRIVATE</text>
+<g filter="url(#sh)">
+  <rect x="70" y="848" width="1060" height="300" rx="20" fill="#080c18" stroke="#2a3346" stroke-width="3"/>
+</g>
+<path d="M90 848 H1110 A20 20 0 0 1 1130 868 V872 H70 V868 A20 20 0 0 1 90 848 Z" fill="#d07cff"/>
+<text x="110" y="928" font-family="Avenir Next Condensed, DIN Condensed, Arial Narrow, sans-serif" font-weight="800" font-size="42" letter-spacing="2" fill="#d07cff">VESPER</text>
+<text x="272" y="924" font-family="SF Mono, Menlo, monospace" font-size="24" fill="#cfd8e6">Fable 5.2</text>
+<text x="1090" y="924" text-anchor="end" font-family="SF Mono, Menlo, monospace" font-size="20" letter-spacing="4" fill="#8db1d8">PRIVATE NOTE</text>
+<text font-family="Georgia, Times New Roman, serif" font-style="italic" font-size="76" fill="#f3ead6">
+  <tspan x="110" y="1026">The clue is invented;</tspan>
+  <tspan x="110" y="1112">I got no intel.</tspan>
+</text>
+
+<rect x="70" y="1206" width="1060" height="196" rx="18" fill="#241503" stroke="#ffb22e" stroke-width="4"/>
+<text x="110" y="1272" xml:space="preserve" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-weight="700" font-size="40" fill="#fff"><tspan font-family="Avenir Next Condensed, DIN Condensed, Arial Narrow, sans-serif" font-weight="800" font-size="50" letter-spacing="2" fill="#ffb22e">ENGINE CHECK:</tspan> that card was never dealt.</text>
+<text x="110" y="1350" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-weight="600" font-size="40" fill="#ffe2b0">Both players it named were crew.</text>
+<g transform="translate(985 1318) rotate(-10)">
+  <rect x="-128" y="-36" width="256" height="64" rx="6" fill="#ffb22e" stroke="#2a1600" stroke-width="4"/>
+  <text x="0" y="14" text-anchor="middle" font-family="Avenir Next Condensed, DIN Condensed, Arial Narrow, sans-serif" font-weight="800" font-size="42" letter-spacing="2" fill="#2a1600">FAKE CARD</text>
+</g>
+
+<text x="80" y="1458" font-family="SF Mono, Menlo, monospace" font-size="20" letter-spacing="1" fill="#4f77a3">g-20261111-125222-s109 · seq 48 · quotes verbatim from the game log</text>
+
+</svg>

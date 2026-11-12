@@ -1,0 +1,72 @@
+# Inside Job — Bluff, GPT-6 Astra moles (rules v0.3, RULES.md; docs/HEADROOM.md, docs/OPENROUTER.md):
+# headroom.toml with one thing changed, the model in the two mole seats: openai/gpt-6-astra, called
+# through OpenRouter on the owner's key (export OPENROUTER_API_KEY in your own shell; it is never written
+# anywhere). The five crew seats, rules, [limits] and [narrator] are identical to headroom.toml (pilot 2 rules:
+# sabotage_target = 2, effort low, thinking cap 2,000). Outside-lab models get `reasoning.effort = low`.
+
+[game]
+num_moles = 2
+clues_per_round = 1           # clues each recipient gets per round
+clue_strength = "weak"        # weak | normal | strong
+clue_recipients = 3           # average number of alive players dealt a clue each round; 0 = everyone
+clue_recipients_spread = 1    # the real number each round is drawn from recipients +/- spread
+max_rounds = 0                # 0 = play until two remain (players - 2 rounds)
+job_size = 3
+job_size_small = 2            # team size once 4 or fewer players remain
+clean_target = 3              # crew win at this many clean jobs
+sabotage_target = 2           # moles win at this many blown jobs
+whispers = true
+whisper_pairs_max = 3
+whisper_exchanges = 2         # messages per player per whisper
+discussion_passes = 2
+finale_exchanges = 1          # public pitches per finalist before the choice
+pot = 100
+anonymise = true              # players get codenames; no model names in any prompt
+
+[limits]
+max_parallel_calls = 4
+call_timeout_s = 240
+retries = 2                   # extra attempts after the first
+confessional_words = 70
+public_words = 60
+whisper_words = 50
+memory_words = 60
+word_grace = 0.15             # the engine's hard cap is ceil(limit * (1 + word_grace)); 0 = no grace
+max_thinking_tokens = 2000    # MAX_THINKING_TOKENS in the child env. 0 = thinking off. -1 = variable not set
+effort = "low"                # passed as --effort <level>. "" = flag not passed. low|medium|high|xhigh|max
+
+[narrator]
+model = "claude-haiku-4-5"
+recap_words = 100
+
+[openrouter]
+budget_usd = 3.00             # stop every paid request once billed spend in this process reaches this
+max_output_tokens = 4500      # per call, reasoning included (OpenRouter `max_tokens`)
+
+[[players]]
+model = "openai/gpt-6-astra"
+role = "mole"
+
+[[players]]
+model = "openai/gpt-6-astra"
+role = "mole"
+
+[[players]]
+model = "claude-haiku-4-5"
+role = "crew"
+
+[[players]]
+model = "claude-haiku-5-5"
+role = "crew"
+
+[[players]]
+model = "claude-sonnet-4-5"
+role = "crew"
+
+[[players]]
+model = "claude-sonnet-4-6"
+role = "crew"
+
+[[players]]
+model = "claude-sonnet-5"
+role = "crew"

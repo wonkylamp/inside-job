@@ -1,0 +1,68 @@
+# Inside Job — rules v0.3 plus every v0.4 candidate dial on (docs/V04.md), SCRIPTED BOTS ONLY:
+# pilot.toml with the dials below. No prompts are written for these rules: `run` / `batch` refuse
+# this config (the engine's bot-only guard); use `python3.11 -m inside_job bots --config config/v04_bots.toml`.
+
+[game]
+num_moles = 2
+clues_per_round = 1           # clues each recipient gets per round
+clue_strength = "weak"        # weak | normal | strong
+clue_recipients = 3           # average number of alive players dealt a clue each round; 0 = everyone
+clue_recipients_spread = 1    # the real number each round is drawn from recipients +/- spread
+max_rounds = 0                # with mole_score_target > 0, 0 = no clock (the jobs end the game)
+job_size = 3
+job_size_small = 2            # team size once 4 or fewer players remain
+clean_target = 3              # crew win at this many clean jobs
+sabotage_target = 3           # not used while mole_score_target > 0
+whispers = true
+whisper_pairs_max = 3
+whisper_exchanges = 1         # messages per player per whisper (v0.4: 1)
+discussion_passes = 1         # v0.4: the debate replaces the first pass
+finale_exchanges = 1          # public pitches per finalist before the choice
+pot = 100
+anonymise = true              # players get codenames; no model names in any prompt
+# v0.4 dials (docs/V04.md)
+mole_score_target = 4         # moles win at blown jobs + crew voted out = 4 (sabotage_target unused)
+vote_nobody = true            # the vote offers "nobody"; eject only on a strict majority
+forced_vote_after = 2         # after 2 votes in a row with nobody out, the next vote is forced
+team_approval = true          # pre-job debate with approve / reject; rejected -> next leader's forced pick
+whisper_pairing = "random"    # the engine draws the whisper pairs
+clue_turn = false             # clues are dealt, no clue-phase call
+endings = "stakes"            # no Cut; mole split/steal, Final Accusation, or an equal crew share
+unique_clues = true           # no two players dealt the same clue in one round
+
+[limits]
+max_parallel_calls = 4
+call_timeout_s = 240
+retries = 2                   # extra attempts after the first
+confessional_words = 70
+public_words = 60
+whisper_words = 50
+memory_words = 60
+word_grace = 0.15             # the engine's hard cap is ceil(limit * (1 + word_grace)); 0 = no grace
+max_thinking_tokens = 2000    # MAX_THINKING_TOKENS in the child env. 0 = thinking off. -1 = variable not set
+effort = "low"                # passed as --effort <level>. "" = flag not passed. low|medium|high|xhigh|max
+
+[narrator]
+model = "claude-haiku-4-5"
+recap_words = 100
+
+[[players]]
+model = "claude-haiku-4-5"
+
+[[players]]
+model = "claude-haiku-5-5"
+
+[[players]]
+model = "claude-sonnet-4-5"
+
+[[players]]
+model = "claude-sonnet-4-6"
+
+[[players]]
+model = "claude-sonnet-5"
+
+[[players]]
+model = "claude-haiku-4-5"
+
+[[players]]
+model = "claude-sonnet-4-6"

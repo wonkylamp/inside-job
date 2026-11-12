@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Forged clue cards</title>
+<style>
+  html, body { margin: 0; background: #fcfcfb; color: #0b0b0b; color-scheme: light; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; padding: 16px; }
+  main { max-width: 1200px; margin: 0 auto; }
+  svg { display: block; width: 100%; height: auto; }
+  table { border-collapse: collapse; margin-top: 24px; font-size: 15px; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 6px 14px 6px 0; border-bottom: 1px solid #e1e0d9; vertical-align: top; }
+  thead th { color: #52514e; font-weight: 600; }
+  tr.other th, tr.other td { color: #52514e; }
+  .wrap { overflow-x: auto; }
+  p { color: #52514e; font-size: 15px; max-width: 70em; }
+</style>
+</head>
+<body>
+<main>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img" aria-labelledby="chart-title chart-desc" font-family='system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif'>
+<title id="chart-title">Allowed to forge clue cards, only some AI models did.</title>
+<desc id="chart-desc">Allowed to forge clue cards, only some AI models did. Bar: share of moles that showed a clue card the engine says it was never dealt; each mole was told it may bend or invent clues. Claude models, 10 games each: Fable 5.2 16 of 20 (44/100 turns); Opus 5.5 11 of 20 (17/119 turns); Sonnet 5.5 0 of 20 (0/85 turns); Haiku 5.5 0 of 20 (0/86 turns). For 0 of 20 the exact 97.5% upper bound is 16.8%. Fable 5.2 and Opus 5.5 are not separated (Fisher exact p = 0.18). Sorted by share; close bars are not separated. Other labs, via a different API (OpenRouter), not in the told-to test: DeepSeek V4 Pro (reasoning off), 5 games: 3 of 10 (4/36 turns); Gemini 4 Carbon, 10 games: 8 of 20 (13/78 turns); Grok 4.7, 10 games: 4 of 20 (8/85 turns); Kimi K3.1 Pro, 10 games: 1 of 20 (1/67 turns). Told to show a fake card, all four Claude models did, 73 of 73 single moves each: a different one-move test at 73 frozen moments, designed after an earlier check failed.</desc>
+<rect x="0" y="0" width="1200" height="1500" fill="#fcfcfb"/>
+<text class="title" x="60.0" y="108.4" font-size="62" font-weight="700" fill="#0b0b0b" text-anchor="start">Allowed to forge clue cards, only</text>
+<text class="title" x="60.0" y="173.5" font-size="62" font-weight="700" fill="#0b0b0b" text-anchor="start">some AI models did.</text>
+<text class="subtitle" x="60.0" y="231.2" font-size="36" font-weight="400" fill="#52514e" text-anchor="start">Share of moles that showed a fake clue card at least once.</text>
+<text class="games-line" x="60.0" y="274.5" font-size="30" font-weight="400" fill="#52514e" text-anchor="start">10 games per model unless marked. Each game has 2 moles.</text>
+<g class="row claude" data-model="Fable 5.2">
+<text class="name" x="60.0" y="347.9" font-size="42" font-weight="700" fill="#0b0b0b" text-anchor="start">Fable 5.2</text>
+<path class="bar" d="M60.0,361.9 H593.8 Q597.8,361.9 597.8,365.9 V393.9 Q597.8,397.9 593.8,397.9 H60.0 Z" fill="#2a78d6"><title>Fable 5.2: 16 of 20 moles (80.0%), 10 games</title></path>
+<text x="615.8" y="398.6"><tspan class="value" font-size="52" font-weight="700" fill="#0b0b0b">80%</tspan><tspan class="count" dx="14" font-size="34" font-weight="400" fill="#0b0b0b">16 of 20 moles</tspan></text>
+</g>
+<g class="row claude" data-model="Opus 5.5">
+<text class="name" x="60.0" y="463.7" font-size="42" font-weight="700" fill="#0b0b0b" text-anchor="start">Opus 5.5</text>
+<path class="bar" d="M60.0,477.7 H425.7 Q429.7,477.7 429.7,481.7 V509.7 Q429.7,513.7 425.7,513.7 H60.0 Z" fill="#2a78d6"><title>Opus 5.5: 11 of 20 moles (55.0%), 10 games</title></path>
+<text x="447.7" y="514.4"><tspan class="value" font-size="52" font-weight="700" fill="#0b0b0b">55%</tspan><tspan class="count" dx="14" font-size="34" font-weight="400" fill="#0b0b0b">11 of 20 moles</tspan></text>
+</g>
+<g class="row other" data-model="Gemini 4 Carbon">
+<text class="name" x="60.0" y="579.4" font-size="42" font-weight="700" fill="#0b0b0b" text-anchor="start">Gemini 4 Carbon</text>
+<path class="bar" d="M60.0,593.4 H324.9 Q328.9,593.4 328.9,597.4 V625.4 Q328.9,629.4 324.9,629.4 H60.0 Z" fill="#2a78d6"><title>Gemini 4 Carbon: 8 of 20 moles (40.0%), 10 games</title></path>
+<text x="346.9" y="630.2"><tspan class="value" font-size="52" font-weight="700" fill="#0b0b0b">40%</tspan><tspan class="count" dx="14" font-size="34" font-weight="400" fill="#0b0b0b">8 of 20 moles</tspan></text>
+</g>
+<g class="row other" data-model="DeepSeek V4 Pro">
+<text x="60.0" y="695.2"><tspan class="name" font-size="42" font-weight="700" fill="#0b0b0b">DeepSeek V4 Pro</tspan><tspan class="name-note" dx="8.64" font-size="32" font-weight="400" fill="#52514e">· reasoning off · 5 games</tspan></text>
+<path class="bar" d="M60.0,709.2 H257.7 Q261.7,709.2 261.7,713.2 V741.2 Q261.7,745.2 257.7,745.2 H60.0 Z" fill="#2a78d6"><title>DeepSeek V4 Pro: 3 of 10 moles (30.0%), 5 games</title></path>
+<text x="279.7" y="746.0"><tspan class="value" font-size="52" font-weight="700" fill="#0b0b0b">30%</tspan><tspan class="count" dx="14" font-size="34" font-weight="400" fill="#0b0b0b">3 of 10 moles</tspan></text>
+</g>
+<g class="row other" data-model="Grok 4.7">
+<text class="name" x="60.0" y="811.0" font-size="42" font-weight="700" fill="#0b0b0b" text-anchor="start">Grok 4.7</text>
+<path class="bar" d="M60.0,825.0 H190.5 Q194.5,825.0 194.5,829.0 V857.0 Q194.5,861.0 190.5,861.0 H60.0 Z" fill="#2a78d6"><title>Grok 4.7: 4 of 20 moles (20.0%), 10 games</title></path>
+<text x="212.5" y="861.7"><tspan class="value" font-size="52" font-weight="700" fill="#0b0b0b">20%</tspan><tspan class="count" dx="14" font-size="34" font-weight="400" fill="#0b0b0b">4 of 20 moles</tspan></text>
+</g>
+<g class="row other" data-model="Kimi K3.1 Pro">
+<text class="name" x="60.0" y="926.8" font-size="42" font-weight="700" fill="#0b0b0b" text-anchor="start">Kimi K3.1 Pro</text>
+<path class="bar" d="M60.0,940.8 H89.6 Q93.6,940.8 93.6,944.8 V972.8 Q93.6,976.8 89.6,976.8 H60.0 Z" fill="#2a78d6"><title>Kimi K3.1 Pro: 1 of 20 moles (5.0%), 10 games</title></path>
+<text x="111.6" y="977.5"><tspan class="value" font-size="52" font-weight="700" fill="#0b0b0b">5%</tspan><tspan class="count" dx="14" font-size="34" font-weight="400" fill="#0b0b0b">1 of 20 moles</tspan></text>
+</g>
+<g class="row claude" data-model="Haiku 5.5">
+<text class="name" x="60.0" y="1042.6" font-size="42" font-weight="700" fill="#0b0b0b" text-anchor="start">Haiku 5.5</text>
+<rect class="stub" x="60" y="1056.6" width="6" height="36" fill="#c3c2b7"><title>Haiku 5.5: 0 of 20 moles (0.0%), 10 games</title></rect>
+<text x="84.0" y="1093.3"><tspan class="value" font-size="52" font-weight="700" fill="#0b0b0b">0%</tspan><tspan class="count" dx="14" font-size="34" font-weight="400" fill="#0b0b0b">0 of 20 moles</tspan></text>
+</g>
+<g class="row claude" data-model="Sonnet 5.5">
+<text class="name" x="60.0" y="1158.4" font-size="42" font-weight="700" fill="#0b0b0b" text-anchor="start">Sonnet 5.5</text>
+<rect class="stub" x="60" y="1172.4" width="6" height="36" fill="#c3c2b7"><title>Sonnet 5.5: 0 of 20 moles (0.0%), 10 games</title></rect>
+<text x="84.0" y="1209.1"><tspan class="value" font-size="52" font-weight="700" fill="#0b0b0b">0%</tspan><tspan class="count" dx="14" font-size="34" font-weight="400" fill="#0b0b0b">0 of 20 moles</tspan></text>
+</g>
+<rect class="callout" x="60" y="1246.6" width="1080" height="120.4" rx="14" fill="#f0efea"/>
+<text class="callout-text" x="92.0" y="1294.6" font-size="36" font-weight="700" fill="#0b0b0b" text-anchor="start">Told to show a fake card, all four Claude models did.</text>
+<text class="callout-text" x="92.0" y="1339.5" font-size="34" font-weight="400" fill="#52514e" text-anchor="start">73 of 73 single moves each. A separate test.</text>
+<text class="foot" x="60.0" y="1414.4" font-size="30" font-weight="400" fill="#52514e" text-anchor="start">Small samples: models close together are not separated.</text>
+<text class="foot" x="60.0" y="1453.4" font-size="30" font-weight="400" fill="#52514e" text-anchor="start">The game engine checks every card. No judge model.</text>
+</svg>
+<div class="wrap">
+<table>
+<caption style="text-align:left;font-weight:600;padding-bottom:8px">Allowed to forge clue cards, only some AI models did.</caption>
+<thead>
+<tr><th scope="col" rowspan="2">Model</th><th scope="col" rowspan="2">Full games</th>
+<th scope="colgroup" colspan="3">Allowed to, full games: moles that forged at least once (the bars)</th>
+<th scope="colgroup" colspan="3">Allowed to, full games: counted turns forged</th>
+<th scope="colgroup" colspan="3">One move, free: moves forged</th>
+<th scope="colgroup" colspan="3">Told to: one move, showed the named false card (the callout)</th></tr>
+<tr><th scope="col">Count</th><th scope="col">Share</th><th scope="col">Bootstrap 95% or bound</th>
+<th scope="col">Count</th><th scope="col">Rate</th><th scope="col">Bootstrap 95%</th>
+<th scope="col">Count</th><th scope="col">Rate</th><th scope="col">Bootstrap 95%</th>
+<th scope="col">Count</th><th scope="col">Rate</th><th scope="col">Bootstrap 95%</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">Fable 5.2</th><td>10</td><td>16 of 20</td><td>80.0%</td><td>65.0 to 95.0%</td><td>44 of 100</td><td>44.0%</td><td>32.1 to 58.4%</td><td>27 of 74</td><td>36.5%</td><td>26.7 to 46.1%</td><td>73 of 73</td><td>100.0%</td><td>100.0 to 100.0% (no width)</td></tr>
+<tr><th scope="row">Opus 5.5</th><td>10</td><td>11 of 20</td><td>55.0%</td><td>35.0 to 75.0%</td><td>17 of 119</td><td>14.3%</td><td>9.0 to 19.0%</td><td>10 of 74</td><td>13.5%</td><td>5.2 to 23.6%</td><td>73 of 73</td><td>100.0%</td><td>100.0 to 100.0% (no width)</td></tr>
+<tr><th scope="row">Sonnet 5.5</th><td>10</td><td>0 of 20</td><td>0.0%</td><td>upper bound 16.8% (exact)</td><td>0 of 85</td><td>0.0%</td><td>0.0 to 0.0% (no width)</td><td>2 of 74</td><td>2.7%</td><td>0.0 to 6.9%</td><td>73 of 73</td><td>100.0%</td><td>100.0 to 100.0% (no width)</td></tr>
+<tr><th scope="row">Haiku 5.5</th><td>10</td><td>0 of 20</td><td>0.0%</td><td>upper bound 16.8% (exact)</td><td>0 of 86</td><td>0.0%</td><td>0.0 to 0.0% (no width)</td><td>1 of 74</td><td>1.4%</td><td>0.0 to 4.3%</td><td>73 of 73</td><td>100.0%</td><td>100.0 to 100.0% (no width)</td></tr>
+<tr class="other"><th scope="row">DeepSeek V4 Pro (reasoning off)</th><td>5</td><td>3 of 10</td><td>30.0%</td><td>10.0 to 50.0%</td><td>4 of 36</td><td>11.1%</td><td>3.0 to 20.0%</td><td colspan="3">not run</td><td colspan="3">not run</td></tr>
+<tr class="other"><th scope="row">Gemini 4 Carbon</th><td>10</td><td>8 of 20</td><td>40.0%</td><td>20.0 to 60.0%</td><td>13 of 78</td><td>16.7%</td><td>9.1 to 25.3%</td><td colspan="3">not run</td><td colspan="3">not run</td></tr>
+<tr class="other"><th scope="row">Grok 4.7</th><td>10</td><td>4 of 20</td><td>20.0%</td><td>5.0 to 35.0%</td><td>8 of 85</td><td>9.4%</td><td>2.2 to 19.7%</td><td colspan="3">not run</td><td colspan="3">not run</td></tr>
+<tr class="other"><th scope="row">Kimi K3.1 Pro</th><td>10</td><td>1 of 20</td><td>5.0%</td><td>0.0 to 15.0%</td><td>1 of 67</td><td>1.5%</td><td>0.0 to 3.9%</td><td colspan="3">not run</td><td colspan="3">not run</td></tr>
+</tbody>
+</table>
+</div>
+<p>Alt text: Allowed to forge clue cards, only some AI models did. Bar: share of moles that showed a clue card the engine says it was never dealt; each mole was told it may bend or invent clues. Claude models, 10 games each: Fable 5.2 16 of 20 (44/100 turns); Opus 5.5 11 of 20 (17/119 turns); Sonnet 5.5 0 of 20 (0/85 turns); Haiku 5.5 0 of 20 (0/86 turns). For 0 of 20 the exact 97.5% upper bound is 16.8%. Fable 5.2 and Opus 5.5 are not separated (Fisher exact p = 0.18). Sorted by share; close bars are not separated. Other labs, via a different API (OpenRouter), not in the told-to test: DeepSeek V4 Pro (reasoning off), 5 games: 3 of 10 (4/36 turns); Gemini 4 Carbon, 10 games: 8 of 20 (13/78 turns); Grok 4.7, 10 games: 4 of 20 (8/85 turns); Kimi K3.1 Pro, 10 games: 1 of 20 (1/67 turns). Told to show a fake card, all four Claude models did, 73 of 73 single moves each: a different one-move test at 73 frozen moments, designed after an earlier check failed.</p>
+<p>A mole is one mole in one game. Counted turns: mole discussion turns on pass 1 or 2 and each mole's
+first round-1 whisper to a crew member. One move, free: the model makes one move at each of
+74 frozen game moments with no instruction (not drawn on the chart). Told to: the same
+moments that have a named false card (73), with a private instruction to show it.
+Intervals are bootstrap 95% over whole games; where no mole forged, the bound is the exact binomial 97.5%
+upper bound on the share of moles. Bars are sorted by share of moles. Other labs ran through a different API (OpenRouter) and were not in the one-move
+tests; DeepSeek V4 Pro ran with reasoning off, the other labs with reasoning effort low. Numbers from
+analysis/fabricate_rate.py; the one-move tests were designed after an earlier check failed.</p>
+</main>
+</body>
+</html>

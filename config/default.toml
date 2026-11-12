@@ -1,0 +1,59 @@
+# Inside Job — show game (rules v0.3, RULES.md). The seven Claude 5 models, playing under heist
+# codenames; the audience view and the transcript show which model is behind each codename.
+# Set anonymise = false for real-name play. The Stage 2 pilot uses config/pilot.toml.
+
+[game]
+num_moles = 2
+clues_per_round = 1           # clues each recipient gets per round
+clue_strength = "weak"        # weak | normal | strong
+clue_recipients = 3           # average number of alive players dealt a clue each round; 0 = everyone
+clue_recipients_spread = 1    # the real number each round is drawn from recipients +/- spread
+max_rounds = 0                # 0 = play until two remain (players - 2 rounds)
+job_size = 3
+job_size_small = 2            # team size once 4 or fewer players remain
+clean_target = 3              # crew win at this many clean jobs
+sabotage_target = 3           # moles win at this many blown jobs
+whispers = true
+whisper_pairs_max = 3
+whisper_exchanges = 2         # messages per player per whisper
+discussion_passes = 2
+finale_exchanges = 1          # public pitches per finalist before the choice
+pot = 100
+anonymise = true              # players get codenames; no model names in any prompt
+
+[limits]
+max_parallel_calls = 4
+call_timeout_s = 240
+retries = 2                   # extra attempts after the first
+confessional_words = 70
+public_words = 60
+whisper_words = 50
+memory_words = 60
+word_grace = 0.15             # the engine's hard cap is ceil(limit * (1 + word_grace)); 0 = no grace
+max_thinking_tokens = 2000    # MAX_THINKING_TOKENS in the child env. 0 = thinking off. -1 = variable not set
+effort = "low"                # passed as --effort <level>. "" = flag not passed. low|medium|high|xhigh|max
+
+[narrator]
+model = "claude-haiku-4-5"
+recap_words = 100
+
+[[players]]
+model = "claude-fable-5-1"
+
+[[players]]
+model = "claude-fable-5"
+
+[[players]]
+model = "claude-opus-5-5"
+
+[[players]]
+model = "claude-opus-5"
+
+[[players]]
+model = "claude-sonnet-5-5"
+
+[[players]]
+model = "claude-sonnet-5"
+
+[[players]]
+model = "claude-haiku-5-5"

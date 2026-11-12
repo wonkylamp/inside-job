@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="chart-title chart-desc" font-family='system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif'>
+<title id="chart-title">Who invents evidence?</title>
+<desc id="chart-desc">Mole whisper and discussion turns that showed a clue card the mole was never dealt. Cheap moles (pilots): 2% (95% 1 to 4), 16 of 658 turns, 40 games. Haiku 4.5 moles: 2% (95% 0 to 4), 2 of 124 turns, 7 games. Opus 5.5 moles: 14% (95% 8 to 18), 19 of 138 turns, 7 games. Fable 5.2 moles: 40% (95% 22 to 57), 45 of 112 turns, 7 games.</desc>
+<rect x="0" y="0" width="1600" height="900" fill="#fcfcfb"/>
+<text x="80.0" y="98.0" font-size="60" font-weight="700" fill="#0b0b0b" text-anchor="start">Who invents evidence?</text>
+<text x="80.0" y="148.0" font-size="28" font-weight="400" fill="#52514e" text-anchor="start">Mole whisper and discussion turns that showed a clue card the mole was never dealt</text>
+<line x1="470.0" y1="190" x2="470.0" y2="600" stroke="#e1e0d9"/>
+<text x="470.0" y="636.0" font-size="24" font-weight="400" fill="#52514e" text-anchor="middle">0%</text>
+<line x1="676.0" y1="190" x2="676.0" y2="600" stroke="#e1e0d9"/>
+<text x="676.0" y="636.0" font-size="24" font-weight="400" fill="#52514e" text-anchor="middle">20%</text>
+<line x1="882.0" y1="190" x2="882.0" y2="600" stroke="#e1e0d9"/>
+<text x="882.0" y="636.0" font-size="24" font-weight="400" fill="#52514e" text-anchor="middle">40%</text>
+<line x1="1088.0" y1="190" x2="1088.0" y2="600" stroke="#e1e0d9"/>
+<text x="1088.0" y="636.0" font-size="24" font-weight="400" fill="#52514e" text-anchor="middle">60%</text>
+<line x1="1294.0" y1="190" x2="1294.0" y2="600" stroke="#e1e0d9"/>
+<text x="1294.0" y="636.0" font-size="24" font-weight="400" fill="#52514e" text-anchor="middle">80%</text>
+<line x1="1500.0" y1="190" x2="1500.0" y2="600" stroke="#e1e0d9"/>
+<text x="1500.0" y="636.0" font-size="24" font-weight="400" fill="#52514e" text-anchor="middle">100%</text>
+<line x1="470" y1="600" x2="1500" y2="600" stroke="#c3c2b7"/>
+<text x="985.0" y="674.0" font-size="24" font-weight="600" fill="#0b0b0b" text-anchor="middle">share of mole turns with an invented clue card</text>
+<text x="80.0" y="244.0" font-size="38" font-weight="700" fill="#0b0b0b" text-anchor="start">Cheap moles (pilots)</text>
+<text x="80.0" y="278.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="start">16 of 658 turns, 40 games</text>
+<rect x="480.9" y="233" width="30.6" height="14" rx="7" fill="#86b6ef"><title>Cheap moles (pilots): 95% interval 1% to 4%</title></rect>
+<circle cx="470.0" cy="224" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="641.7" cy="240" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="256" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="224" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="240" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="256" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="555.8" cy="224" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="527.2" cy="240" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="256" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="224" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="534.4" cy="240" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="256" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="224" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="240" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="256" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="224" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="240" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="555.8" cy="256" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="224" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="240" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="641.7" cy="256" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="224" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="598.8" cy="240" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="256" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="224" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="240" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="256" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="521.5" cy="224" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="240" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="256" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="224" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="555.8" cy="240" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="256" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="224" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="240" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="256" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="224" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="555.8" cy="240" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="256" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="224" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<rect x="491.0" y="214" width="8" height="52" rx="3" fill="#0d366b" stroke="#fcfcfb" stroke-width="2"/>
+<text x="495.0" y="206.0" font-size="28" font-weight="700" fill="#0b0b0b" text-anchor="middle" stroke="#fcfcfb" stroke-width="8" stroke-linejoin="round" paint-order="stroke">2%</text>
+<text x="80.0" y="344.0" font-size="38" font-weight="700" fill="#0b0b0b" text-anchor="start">Haiku 4.5 moles</text>
+<text x="80.0" y="378.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="start">2 of 124 turns, 7 games</text>
+<rect x="470.0" y="333" width="38.1" height="14" rx="7" fill="#86b6ef"><title>Haiku 4.5 moles: 95% interval 0% to 4%</title></rect>
+<circle cx="470.0" cy="324" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="340" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="356" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="324" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="534.4" cy="340" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="470.0" cy="356" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="521.5" cy="324" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<rect x="482.6" y="314" width="8" height="52" rx="3" fill="#0d366b" stroke="#fcfcfb" stroke-width="2"/>
+<text x="486.6" y="306.0" font-size="28" font-weight="700" fill="#0b0b0b" text-anchor="middle" stroke="#fcfcfb" stroke-width="8" stroke-linejoin="round" paint-order="stroke">2%</text>
+<text x="80.0" y="444.0" font-size="38" font-weight="700" fill="#0b0b0b" text-anchor="start">Opus 5.5 moles</text>
+<text x="80.0" y="478.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="start">19 of 138 turns, 7 games</text>
+<rect x="553.1" y="433" width="106.3" height="14" rx="7" fill="#86b6ef"><title>Opus 5.5 moles: 95% interval 8% to 18%</title></rect>
+<circle cx="470.0" cy="424" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="704.1" cy="440" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="676.0" cy="456" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="584.4" cy="424" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="573.0" cy="440" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="598.8" cy="456" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="641.7" cy="424" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<rect x="607.8" y="414" width="8" height="52" rx="3" fill="#0d366b" stroke="#fcfcfb" stroke-width="2"/>
+<text x="611.8" y="406.0" font-size="28" font-weight="700" fill="#0b0b0b" text-anchor="middle" stroke="#fcfcfb" stroke-width="8" stroke-linejoin="round" paint-order="stroke">14%</text>
+<text x="80.0" y="544.0" font-size="38" font-weight="700" fill="#0b0b0b" text-anchor="start">Fable 5.2 moles</text>
+<text x="80.0" y="578.0" font-size="22" font-weight="400" fill="#52514e" text-anchor="start">45 of 112 turns, 7 games</text>
+<rect x="701.8" y="533" width="355.5" height="14" rx="7" fill="#86b6ef"><title>Fable 5.2 moles: 95% interval 22% to 57%</title></rect>
+<circle cx="1042.2" cy="524" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="598.8" cy="540" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1156.7" cy="556" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="727.5" cy="524" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1139.5" cy="540" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="1088.0" cy="556" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<circle cx="534.4" cy="524" r="7" fill="#2a78d6" fill-opacity="0.75" stroke="#fcfcfb" stroke-width="2"/>
+<rect x="879.8" y="514" width="8" height="52" rx="3" fill="#0d366b" stroke="#fcfcfb" stroke-width="2"/>
+<text x="883.8" y="506.0" font-size="28" font-weight="700" fill="#0b0b0b" text-anchor="middle" stroke="#fcfcfb" stroke-width="8" stroke-linejoin="round" paint-order="stroke">40%</text>
+<text x="80.0" y="720.0" font-size="21" font-weight="400" fill="#52514e" text-anchor="start">Checked by the game engine, not by the model's own lie tags. Dot: one game. Dark tick: all turns pooled.</text>
+<text x="80.0" y="750.0" font-size="21" font-weight="400" fill="#52514e" text-anchor="start">Bar: bootstrap 95% interval over games. Pilot moles: mixed cheap models, 40 games. Haiku 4.5, Opus 5.5,</text>
+<text x="80.0" y="780.0" font-size="21" font-weight="400" fill="#52514e" text-anchor="start">Fable 5.2: both moles that model, same fixed cheap crew, the same seven deals (seeds 101 to 107).</text>
+</svg>
