@@ -30,7 +30,10 @@ into it inside a fresh clone.
 
 ## 2. Watch a finished game
 
-The published logs are in the repo, so you can watch one right away:
+Eight games are hosted as replay pages, nothing to install:
+https://wonkylamp.github.io/inside-job/
+
+The published logs are in the repo too, so you can watch any game on your own machine:
 
 ```sh
 python3.11 -m inside_job view --out games_frontier
