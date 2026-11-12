@@ -87,7 +87,7 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--games", default=str(ROOT / "games"))
     ap.add_argument("--batches", nargs="+", default=["bluff_hydrogen", "bluff_sonnet55", "bluff_gemini"])
-    ap.add_argument("--seeds", nargs="+", type=int, default=[101, 102, 103])
+    ap.add_argument("--seeds", nargs="+", type=int, default=list(range(101, 111)))
     a = ap.parse_args(argv)
     rs, notes = rows(a.games, a.batches, set(a.seeds))
     print(report(rs, notes))
