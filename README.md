@@ -260,6 +260,9 @@ above; the totals stay those of the 143 games analysed. Measured, per game, by
 forged card, on 5 of 73 counted turns; seven mole pairs reached the finale, all 14 finalists
 promised to split, and 13 split and 1 stole. On the same ten seeds Sonnet 5.5 moles forged on 0 of
 85 turns and Gemini 4 Carbon moles on 13 of 78. Ten games rank nobody and separate no two models.
+One extra chart, `docs/charts/fabricate_hydrogen.png` (`python3.11 analysis/fabricate_hydrogen_chart.py`),
+is the forged-card chart with a Hydrogen bar added, drawn as an outline and marked "added after the
+analysis"; the chart of the analysed games, `docs/charts/fabricate.png`, is unchanged.
 
 What this does not show: how well a forged card worked on the other players; anything about
 behaviour outside a game the models agreed to play; anything about models or settings not listed

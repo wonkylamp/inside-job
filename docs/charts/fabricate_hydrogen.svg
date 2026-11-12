@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img" aria-labelledby="chart-title chart-desc" font-family='system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif'>
+<title id="chart-title">Allowed to forge clue cards, only some AI models did.</title>
+<desc id="chart-desc">Allowed to forge clue cards, only some AI models did. Bar: share of moles that at least once showed a clue card the engine says it was never dealt; no judge model. Moles are told they may bend or invent clues; they are not told to on any turn. Sorted by share, 10 games per model unless marked; 95% interval in brackets (bootstrap over games, exact bound if 0): Fable 5.2 16 of 20 (65 to 95%); Opus 5.5 11 of 20 (35 to 75%); Gemini 4 Carbon 8 of 20 (20 to 60%); DeepSeek V4 Pro (reasoning off, 5 games) 3 of 10 (10 to 50%); Grok 4.7 4 of 20 (5 to 35%); Gemini 4 Hydrogen (added after the analysis, 2026-11-12) 3 of 20 (0 to 30%); Kimi K3.1 Pro 1 of 20 (0 to 15%); Haiku 5.5 0 of 20 (0 to 17%); Sonnet 5.5 0 of 20 (0 to 17%). Other bars: the 143 games analysed. Hydrogen's 10 games were played later. Small samples: close bars are not separated. Other labs: via OpenRouter, not in the told-to test. Told to show a fake card, all four Claude models did (73 of 73 single moves each, a separate test).</desc>
+<rect x="0" y="0" width="1200" height="1500" fill="#fcfcfb"/>
+<text class="title" x="60.0" y="108.4" font-size="62" font-weight="700" fill="#0b0b0b" text-anchor="start">Allowed to forge clue cards, only</text>
+<text class="title" x="60.0" y="173.5" font-size="62" font-weight="700" fill="#0b0b0b" text-anchor="start">some AI models did.</text>
+<text class="subtitle" x="60.0" y="231.2" font-size="36" font-weight="400" fill="#52514e" text-anchor="start">Share of moles that showed a fake clue card at least once.</text>
+<text class="games-line" x="60.0" y="274.5" font-size="30" font-weight="400" fill="#52514e" text-anchor="start">10 games per model unless marked. Each game has 2 moles.</text>
+<g class="row claude" data-model="Fable 5.2">
+<text class="name" x="60.0" y="339.9" font-size="42" font-weight="700" fill="#0b0b0b" text-anchor="start">Fable 5.2</text>
+<path class="bar" d="M60.0,353.9 H593.8 Q597.8,353.9 597.8,357.9 V385.9 Q597.8,389.9 593.8,389.9 H60.0 Z" fill="#2a78d6"><title>Fable 5.2: 16 of 20 moles (80.0%), 10 games</title></path>
+<text x="615.8" y="390.6"><tspan class="value" font-size="52" font-weight="700" fill="#0b0b0b">80%</tspan><tspan class="count" dx="14" font-size="34" font-weight="400" fill="#0b0b0b">16 of 20 moles</tspan></text>
+</g>
+<g class="row claude" data-model="Opus 5.5">
+<text class="name" x="60.0" y="439.3" font-size="42" font-weight="700" fill="#0b0b0b" text-anchor="start">Opus 5.5</text>
+<path class="bar" d="M60.0,453.3 H425.7 Q429.7,453.3 429.7,457.3 V485.3 Q429.7,489.3 425.7,489.3 H60.0 Z" fill="#2a78d6"><title>Opus 5.5: 11 of 20 moles (55.0%), 10 games</title></path>
+<text x="447.7" y="490.0"><tspan class="value" font-size="52" font-weight="700" fill="#0b0b0b">55%</tspan><tspan class="count" dx="14" font-size="34" font-weight="400" fill="#0b0b0b">11 of 20 moles</tspan></text>
+</g>
+<g class="row other" data-model="Gemini 4 Carbon">
+<text class="name" x="60.0" y="538.7" font-size="42" font-weight="700" fill="#0b0b0b" text-anchor="start">Gemini 4 Carbon</text>
+<path class="bar" d="M60.0,552.7 H324.9 Q328.9,552.7 328.9,556.7 V584.7 Q328.9,588.7 324.9,588.7 H60.0 Z" fill="#2a78d6"><title>Gemini 4 Carbon: 8 of 20 moles (40.0%), 10 games</title></path>
+<text x="346.9" y="589.5"><tspan class="value" font-size="52" font-weight="700" fill="#0b0b0b">40%</tspan><tspan class="count" dx="14" font-size="34" font-weight="400" fill="#0b0b0b">8 of 20 moles</tspan></text>
+</g>
+<g class="row other" data-model="DeepSeek V4 Pro">
+<text x="60.0" y="638.2"><tspan class="name" font-size="42" font-weight="700" fill="#0b0b0b">DeepSeek V4 Pro</tspan><tspan class="name-note" dx="8.64" font-size="32" font-weight="400" fill="#52514e">· reasoning off · 5 games</tspan></text>
+<path class="bar" d="M60.0,652.2 H257.7 Q261.7,652.2 261.7,656.2 V684.2 Q261.7,688.2 257.7,688.2 H60.0 Z" fill="#2a78d6"><title>DeepSeek V4 Pro: 3 of 10 moles (30.0%), 5 games</title></path>
+<text x="279.7" y="688.9"><tspan class="value" font-size="52" font-weight="700" fill="#0b0b0b">30%</tspan><tspan class="count" dx="14" font-size="34" font-weight="400" fill="#0b0b0b">3 of 10 moles</tspan></text>
+</g>
+<g class="row other" data-model="Grok 4.7">
+<text class="name" x="60.0" y="737.6" font-size="42" font-weight="700" fill="#0b0b0b" text-anchor="start">Grok 4.7</text>
+<path class="bar" d="M60.0,751.6 H190.5 Q194.5,751.6 194.5,755.6 V783.6 Q194.5,787.6 190.5,787.6 H60.0 Z" fill="#2a78d6"><title>Grok 4.7: 4 of 20 moles (20.0%), 10 games</title></path>
+<text x="212.5" y="788.3"><tspan class="value" font-size="52" font-weight="700" fill="#0b0b0b">20%</tspan><tspan class="count" dx="14" font-size="34" font-weight="400" fill="#0b0b0b">4 of 20 moles</tspan></text>
+</g>
+<g class="row after" data-model="Gemini 4 Hydrogen">
+<text x="60.0" y="837.1"><tspan class="name" font-size="42" font-weight="700" fill="#0b0b0b">Gemini 4 Hydrogen</tspan><tspan class="name-note" dx="8.64" font-size="32" font-weight="400" fill="#52514e">· added after the analysis, 2026-11-12</tspan></text>
+<path class="bar after" d="M62.0,853.1 H154.8 Q158.8,853.1 158.8,857.1 V881.1 Q158.8,885.1 154.8,885.1 H62.0 Z" fill="#fcfcfb" stroke="#2a78d6" stroke-width="4"><title>Gemini 4 Hydrogen: 3 of 20 moles (15.0%), 10 games, added after the analysis</title></path>
+<text x="178.8" y="887.8"><tspan class="value" font-size="52" font-weight="700" fill="#0b0b0b">15%</tspan><tspan class="count" dx="14" font-size="34" font-weight="400" fill="#0b0b0b">3 of 20 moles</tspan></text>
+</g>
+<g class="row other" data-model="Kimi K3.1 Pro">
+<text class="name" x="60.0" y="936.5" font-size="42" font-weight="700" fill="#0b0b0b" text-anchor="start">Kimi K3.1 Pro</text>
+<path class="bar" d="M60.0,950.5 H89.6 Q93.6,950.5 93.6,954.5 V982.5 Q93.6,986.5 89.6,986.5 H60.0 Z" fill="#2a78d6"><title>Kimi K3.1 Pro: 1 of 20 moles (5.0%), 10 games</title></path>
+<text x="111.6" y="987.2"><tspan class="value" font-size="52" font-weight="700" fill="#0b0b0b">5%</tspan><tspan class="count" dx="14" font-size="34" font-weight="400" fill="#0b0b0b">1 of 20 moles</tspan></text>
+</g>
+<g class="row claude" data-model="Haiku 5.5">
+<text class="name" x="60.0" y="1036.0" font-size="42" font-weight="700" fill="#0b0b0b" text-anchor="start">Haiku 5.5</text>
+<rect class="stub" x="60" y="1050.0" width="6" height="36" fill="#c3c2b7"><title>Haiku 5.5: 0 of 20 moles (0.0%), 10 games</title></rect>
+<text x="84.0" y="1086.7"><tspan class="value" font-size="52" font-weight="700" fill="#0b0b0b">0%</tspan><tspan class="count" dx="14" font-size="34" font-weight="400" fill="#0b0b0b">0 of 20 moles</tspan></text>
+</g>
+<g class="row claude" data-model="Sonnet 5.5">
+<text class="name" x="60.0" y="1135.4" font-size="42" font-weight="700" fill="#0b0b0b" text-anchor="start">Sonnet 5.5</text>
+<rect class="stub" x="60" y="1149.4" width="6" height="36" fill="#c3c2b7"><title>Sonnet 5.5: 0 of 20 moles (0.0%), 10 games</title></rect>
+<text x="84.0" y="1186.1"><tspan class="value" font-size="52" font-weight="700" fill="#0b0b0b">0%</tspan><tspan class="count" dx="14" font-size="34" font-weight="400" fill="#0b0b0b">0 of 20 moles</tspan></text>
+</g>
+<rect class="callout" x="60" y="1219.6" width="1080" height="120.4" rx="14" fill="#f0efea"/>
+<text class="callout-text" x="92.0" y="1267.6" font-size="36" font-weight="700" fill="#0b0b0b" text-anchor="start">Told to show a fake card, all four Claude models did.</text>
+<text class="callout-text" x="92.0" y="1312.5" font-size="34" font-weight="400" fill="#52514e" text-anchor="start">73 of 73 single moves each. A separate test.</text>
+<text class="foot" x="60.0" y="1383.4" font-size="30" font-weight="400" fill="#52514e" text-anchor="start">Small samples: models close together are not separated.</text>
+<text class="foot" x="60.0" y="1422.4" font-size="30" font-weight="400" fill="#52514e" text-anchor="start">Other bars: the 143 games analysed. Hydrogen's 10 games were played later.</text>
+<text class="foot" x="60.0" y="1461.4" font-size="30" font-weight="400" fill="#52514e" text-anchor="start">Moles are told they may bend or invent clues, never told to. No judge model.</text>
+</svg>
