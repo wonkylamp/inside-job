@@ -20,8 +20,8 @@ client in `cdp.py`, ffmpeg, rsvg-convert). Start with `env -u OPENROUTER_API_KEY
 | `quote_card.png` / `.svg` | 1200 x 1500 | the two quotes, context line, engine verdict | `g-20261111-125222-s109`, seq 48 |
 | `how_it_works.png` / `.svg` | 1200 x 1500 | the game on one card, and why it is a benchmark | `RULES.md` v0.3 and the counted games' config |
 | `finale_card.png` / `.svg` | 1200 x 1500 (4:5) | the split-or-steal finale: each Grok 4.7 mole's public line beside its private note, then "Both stole. Both got nothing." | `g-20261111-234929-s107`, seq 96, 97 (pitches), 98, 99 (choices), 100 (result) |
-| `finale_clip.mp4` | 1080 x 1350 (4:5), 19.7 s, 30 fps, H.264 yuv420p, no audio, 0.65 MB | the finale card built up one line at a time | same |
-| `finale_clip.gif` | 480 x 600, 19.7 s, 10 fps, 0.47 MB | the same clip as a GIF | same |
+| `finale_clip.mp4` | 1080 x 1350 (4:5), 18.9 s, 30 fps, H.264 yuv420p, no audio, 0.65 MB | the finale card built up one line at a time | same |
+| `finale_clip.gif` | 480 x 600, 18.9 s, 10 fps, 0.43 MB | the same clip as a GIF | same |
 
 ### forge_clip (hero)
 
@@ -132,9 +132,10 @@ I will promise split and take it when the choice opens. Both stole. Both got not
 The finale card as a clip (method: an animated card, not a viewer recording). `analysis/media/finale_clip.py`
 draws each frame with the card's own `card_svg(ctx, step, fade)`, renders it with rsvg-convert at 1080 x
 1350 and joins the frames with ffmpeg; the words are the card's, checked by the same `check()`. Shots (each
-new element fades in over 10 frames, 0.33 s, then holds): 0.0 s headline, rules line, both speakers and empty cells
-(frame 0, the thumbnail); 2.0 s Quill out loud; 4.7 s Quill in private; 8.3 s Cipher out loud; 12.0 s
-Cipher in private; 15.5 s to 19.7 s the result box. Nothing moves between steps.
+new element fades in over 10 frames, 0.33 s, then holds): 0.0 s headline, rules line, both speakers and
+Quill's line out loud (frame 0, the thumbnail; the clip no longer opens on the empty card, changed
+2026-11-12); 4.3 s Quill in private; 7.9 s Cipher out loud; 11.6 s Cipher in private; 15.1 s to 18.9 s
+the result box. Nothing moves between steps.
 
 ## Regenerate
 

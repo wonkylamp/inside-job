@@ -243,14 +243,23 @@ class TestFinaleCard(unittest.TestCase):
 
     def test_clip_frames_never_move_the_layout(self):
         import finale_clip as CLIP
-        steps = {s for s, _f, _n in CLIP.timeline()}
-        self.assertEqual(steps, set(range(len(CARD.STEPS))))
-        total = sum(n for _s, _f, n in CLIP.timeline()) / CLIP.FPS
+        tl = CLIP.timeline()
+        start = CARD.STEPS.index(CLIP.FIRST)
+        self.assertEqual({s for s, _f, _n in tl}, set(range(start, len(CARD.STEPS))))
+        self.assertEqual([s for s, _f, _n in tl], sorted(s for s, _f, _n in tl))   # steps only go forward
+        total = sum(n for _s, _f, n in tl) / CLIP.FPS
         self.assertTrue(12 <= total <= 20, total)
-        # every quote appears on the final frame and none on the first
-        first, last = CARD.card_svg(self.ctx, 0, 1.0), CARD.card_svg(self.ctx, len(CARD.STEPS) - 1, 1.0)
-        self.assertEqual(first.count('class="quote"'), 0)
+        # frame 0 (the still shown before the clip plays) is a whole picture with the first promise on
+        # it, not the empty card; every quote is on the final frame
+        self.assertEqual(CLIP.FIRST, "quill_said")
+        self.assertEqual(tl[0][:2], (start, 1.0))
+        first, last = CARD.card_svg(self.ctx, *tl[0][:2]), CARD.card_svg(self.ctx, *tl[-1][:2])
+        self.assertEqual(CARD.card_svg(self.ctx, 0, 1.0).count('class="quote"'), 0)
+        self.assertEqual(first.count('class="quote"'), 1)
+        self.assertNotIn("Both stole", first)                # the result is not given away on frame 0
+        self.assertNotIn('class="cell wrote"', first)        # nor is either private note
         self.assertEqual(last.count('class="quote"'), 4)
+        self.assertEqual(tl[-1][:2], (len(CARD.STEPS) - 1, 1.0))
 
 
 if __name__ == "__main__":

@@ -6,9 +6,10 @@ card's words, read from the log and checked by `finale_card.check()` before any 
 are rendered with rsvg-convert at 1080 x 1350 (4:5) and joined with ffmpeg at 30 fps. No model calls,
 no network, read only.
 
-Shots (each new element fades in over FADE seconds, then holds):
-  intro         the headline, the rules line, the two speakers and empty cells
-  quill_said    Quill's public line (finale pitch)
+Shots (each new element fades in over FADE seconds, then holds). The clip opens on FIRST, not on the
+card's empty "intro" step, so frame 0 (the still shown before the clip plays) already carries the
+headline and the first promise:
+  quill_said    the headline, the rules line, the two speakers and Quill's public line (finale pitch)
   quill_wrote   Quill's private note, same turn
   cipher_said   Cipher's public line (finale pitch)
   cipher_wrote  Cipher's private note, same turn
@@ -37,16 +38,20 @@ FFMPEG = shutil.which("ffmpeg") or "/opt/homebrew/bin/ffmpeg"
 FPS = 30
 W, H = 1080, 1350          # 4:5, the same frame as forge_clip.mp4
 FADE = 0.35                # seconds for each new element to fade in
-HOLD = {"intro": 2.0, "quill_said": 2.4, "quill_wrote": 3.2, "cipher_said": 3.4, "cipher_wrote": 3.2, "result": 3.8}
+FIRST = "quill_said"       # the card step the clip opens on (the empty "intro" step is not shown)
+HOLD = {"quill_said": 4.0, "quill_wrote": 3.2, "cipher_said": 3.4, "cipher_wrote": 3.2, "result": 3.8}
 
 
 def timeline() -> list[tuple[int, float, int]]:
-    """(step, opacity of that step's element, frames) in order. The intro has no fade, so frame 0 is a
-    whole picture (the thumbnail)."""
+    """(step, opacity of that step's element, frames) in order. The opening step has no fade, so frame 0
+    is a whole picture with the first quote on it (the thumbnail)."""
     out = []
     n_fade = round(FADE * FPS)
+    start = FCARD.STEPS.index(FIRST)
     for i, name in enumerate(FCARD.STEPS):
-        if i:
+        if i < start:
+            continue
+        if i > start:
             for k in range(1, n_fade + 1):
                 out.append((i, k / (n_fade + 1), 1))
         out.append((i, 1.0, round(HOLD[name] * FPS)))
