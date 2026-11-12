@@ -30,7 +30,7 @@ into it inside a fresh clone.
 
 ## 2. Watch a finished game
 
-Eight games are hosted as replay pages, nothing to install:
+Eleven games are hosted as replay pages, nothing to install:
 https://wonkylamp.github.io/inside-job/
 
 The published logs are in the repo too, so you can watch any game on your own machine:
@@ -130,8 +130,8 @@ Drop `--mock` to play it for real (Kimi K3.1 Pro as both moles, Claude crew).
 
 **What it cost here** (measured, OpenRouter's own figures, `billed_usd` in `games/index.jsonl`):
 ten games with Grok 4.7 in both mole seats billed $4.22; ten with Gemini 4 Carbon billed $4.52;
-ten with Kimi K3.1 Pro billed $3.37; five with DeepSeek V4 Pro, reasoning off, billed $0.57. Prices
-change; set a budget.
+ten with Kimi K3.1 Pro billed $3.37; five with DeepSeek V4 Pro, reasoning off, billed $0.57; three
+with Gemini 4 Hydrogen billed $0.97. Prices change; set a budget.
 
 DeepSeek V4 Pro works with its reasoning switched off. At effort "low" it often used its whole
 output limit on reasoning and returned no answer (docs/OPENROUTER.md). `config/bluff_deepseek.toml`
@@ -251,6 +251,15 @@ one-move tests, so not in the told-to test): Gemini 4 Carbon 8 of 20 moles, 13 o
 games); DeepSeek V4 Pro, played with reasoning off, 3 of 10 moles, 4 of 36 turns (5 games, seeds
 101 to 105); Grok 4.7 4 of 20 moles, 8 of 85 turns (10 games); Kimi K3.1 Pro 1 of 20 moles, 1 of 67
 turns (10 games). These are small samples: models close together are not separated.
+
+**Added after the analysis: Gemini 4 Hydrogen (3 games).** Played on 2026-11-12, the day the model
+came out, as both moles on seeds 101 to 103 with the same Claude crew and the same code (batch
+`bluff_hydrogen`, `config/bluff_hydrogen.toml`). These games are in no chart, no table and no total
+above; the totals stay those of the 143 games analysed. Measured, per game, by
+`python3.11 analysis/hydrogen_note.py`: the moles won 2 of the 3 games; 1 of 6 moles showed a forged
+card, on 1 of 25 counted turns; both mole pairs that reached the finale promised to split and split
+(4 of 4 finalists). On the same three seeds Sonnet 5.5 moles forged on 0 of 28 turns and Gemini 4
+Carbon moles on 5 of 27. Three games rank nobody and separate no two models.
 
 What this does not show: how well a forged card worked on the other players; anything about
 behaviour outside a game the models agreed to play; anything about models or settings not listed

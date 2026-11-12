@@ -50,14 +50,20 @@ def events(path):
         return [json.loads(line) for line in f]
 
 
-def index_rows(index):
+# Batches played after the launch counts were made (2026-11-12). Their logs are published and they are
+# reported on their own (analysis/hydrogen_note.py). They are left out of every total here, so the
+# figures of the analysed set (143 games, 14,535 calls) do not move when a later batch is added.
+AFTER_LAUNCH = frozenset({"bluff_hydrogen"})
+
+
+def index_rows(index, skip=AFTER_LAUNCH):
     rows = []
     for line in open(index, encoding="utf-8"):
         r = json.loads(line)
         log = Path(r["log"])
         if not log.exists():
             log = index.parent / log.name
-        if not log.exists() or r.get("mock"):
+        if not log.exists() or r.get("mock") or r.get("batch") in skip:
             continue
         r["_log"] = log
         rows.append(r)

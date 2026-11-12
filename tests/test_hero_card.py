@@ -34,6 +34,10 @@ HAVE_TOOLS = bool(shutil.which("node") or Path(HERO.NODE).exists()) and Path(HER
 HAVE_LOGS = (ROOT / "games" / "index.jsonl").exists() and (ROOT / "games_frontier" / "index.jsonl").exists()
 
 
+# Played after the launch counts were made (2026-11-12); published, but not part of the image's totals.
+AFTER_LAUNCH = {"bluff_hydrogen"}
+
+
 def count_from_logs() -> dict:
     """Games, calls, players and moles, counted here straight from the logs (not through the script)."""
     games = calls = 0
@@ -45,7 +49,7 @@ def count_from_logs() -> dict:
             log = Path(r["log"])
             if not log.exists():
                 log = index.parent / log.name
-            if r.get("mock") or not log.exists():
+            if r.get("mock") or not log.exists() or r.get("batch") in AFTER_LAUNCH:
                 continue
             games += 1
             calls += (r.get("tokens") or {}).get("calls", 0) or 0

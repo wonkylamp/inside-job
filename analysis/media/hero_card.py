@@ -7,7 +7,8 @@ on the seats and nothing on the image comes from one game.
 Every number on the image is read from the logs at build time:
   - players and moles per game: the counted games' game_start config (cards.check_rules);
   - games and model calls: every real game in games/index.jsonl and games_frontier/index.jsonl, read
-    and totalled the way analysis/extra_stats.py does (its index_rows; calls = tokens.calls);
+    and totalled the way analysis/extra_stats.py does (its index_rows; calls = tokens.calls). Batches
+    played after the launch counts were made (extra_stats.AFTER_LAUNCH) are left out;
   - the models that played the moles: extra_stats.GROUPS, in that order, each with at least one game.
 
 The characters are drawn by the viewer's own code: the character section of inside_job/viewer/index.html

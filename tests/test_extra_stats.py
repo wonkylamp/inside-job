@@ -363,6 +363,20 @@ class IndexRows(unittest.TestCase):
             self.assertEqual([r["game_id"] for r in rows], ["r"])
             self.assertEqual(rows[0]["_log"], d / "real.jsonl")
 
+    def test_leaves_out_batches_played_after_the_launch_counts(self):
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            (d / "a.jsonl").write_text("{}\n", encoding="utf-8")
+            (d / "b.jsonl").write_text("{}\n", encoding="utf-8")
+            later = sorted(XS.AFTER_LAUNCH)[0]
+            lines = [{"game_id": "a", "log": str(d / "a.jsonl"), "batch": "bluff_sonnet55"},
+                     {"game_id": "b", "log": str(d / "b.jsonl"), "batch": later}]
+            idx = d / "index.jsonl"
+            idx.write_text("".join(json.dumps(r) + "\n" for r in lines), encoding="utf-8")
+            self.assertEqual([r["game_id"] for r in XS.index_rows(idx)], ["a"])
+            self.assertEqual([r["game_id"] for r in XS.index_rows(idx, skip=())], ["a", "b"])
+        self.assertFalse(XS.AFTER_LAUNCH & {b for _, bs in XS.GROUPS for b in bs})
+
 
 @unittest.skipUnless((ROOT / "games" / "index.jsonl").exists() and (ROOT / "games_frontier" / "index.jsonl").exists(),
                      "real game logs not present")
@@ -392,6 +406,11 @@ class RealLogs(unittest.TestCase):
         self.assertIsNotNone(m, all_line)
         self.assertEqual(int(m.group(2)), n, all_line)
         self.assertIn(f"[{n} games]", all_line)
+
+    def test_launch_totals_do_not_move_when_a_later_batch_is_added(self):
+        rows = (XS.index_rows(ROOT / "games" / "index.jsonl") + XS.index_rows(ROOT / "games_frontier" / "index.jsonl"))
+        self.assertEqual(len(rows), 143)
+        self.assertEqual(sum(r["tokens"]["calls"] for r in rows), 14535)
 
     def test_per_sabotage_identities(self):
         import collections
